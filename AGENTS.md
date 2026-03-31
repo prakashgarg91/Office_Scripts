@@ -73,7 +73,8 @@ Software is not complete unless the full chain works together professionally.
 
 ## Model And Quality Policy
 
-- Use GLM 5.1 only when the assistant is acting as manager and orchestrating work through `opencode` or Claude Code.
+- Use `zai-coding-plan/glm-5.1` when the assistant is acting as manager and orchestrating work through `opencode` or Claude Code.
+- If `glm-5.1` is unavailable, unhealthy, or not responding, fall back to any available free `opencode/*` model before blocking work. Prefer `opencode/big-pickle`, `opencode/mimo-v2-omni-free`, `opencode/minimax-m2.5-free`, and `opencode/qwen3.6-plus-free`, then any other working free `opencode/*` model.
 - Treat references to GLM 4.x, GLM 4.7, or older GLM prompts as stale unless the user explicitly asks for them.
 - This model-selection rule is separate from `0.dev-matrix`; `0.dev-matrix` is for repo-specific context, SOPs, quality tracking, and codebase truth.
 - When using `opencode`, parallel multi-agent execution is allowed when it materially improves speed, coverage, or coordination.
