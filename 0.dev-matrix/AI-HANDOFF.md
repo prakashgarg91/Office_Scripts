@@ -14,6 +14,7 @@ Update protocol:
 - Every close-day entry must include these exact labels:
 	- `Changed:`
 	- `Verified:`
+	- `Operational proof:`
 	- `Continue from:`
 	- `Next step:`
 	- `Blockers:`
@@ -25,6 +26,7 @@ Update protocol:
 ### 2026-04-03
 - Changed: kept this repo intentionally light-governance and updated the handoff contract so continuity still exists even without a full runtime automation baseline.
 - Verified: documentation-governance files and the structured handoff format are present.
+- Operational proof: not run - no active runtime surface is defined in this light-governance repo.
 - Continue from: treat this repo as handoff-plus-governance only unless it becomes an actively validated software repo.
 - Next step: expand to a full dev-matrix baseline only if Office_Scripts becomes an actively validated software repo.
 - Blockers: no active runtime surface is currently defined for a deeper close-day automation hook.
