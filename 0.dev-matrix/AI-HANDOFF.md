@@ -3,7 +3,9 @@
 Purpose: keep a short, durable handoff for future AI work in this repo.
 
 Working rules:
-- Start by reading this file, `git status`, and `AGENTS.md` if it exists.
+- Start every session by reading this file first, then `git status`, and `AGENTS.md` if it exists.
+- If `0.dev-matrix/resume-work.ps1` exists, run it before coding instead of starting with the full launch-check flow.
+- If `0.dev-matrix/pause-work.ps1` exists, use it before a short stop so the next restart can resume immediately.
 - Fix root causes when possible and avoid unrelated churn.
 - Do not commit generated logs, screenshots, or temporary test artifacts unless they are the intended deliverable.
 - Before pushing, record what changed, how it was verified, and what still needs work.
@@ -19,9 +21,19 @@ Update protocol:
 	- `Next step:`
 	- `Blockers:`
 - If a field has nothing to report, write `none` explicitly.
+- Keep each field to the minimum truthful line needed to resume; handoff is a checkpoint, not a long report.
+- Keep `Next step:` small enough that the next short work session can resume without re-planning the whole repo.
 - The latest entry should let the next AI continue from the exact checkpoint without re-discovering context.
 
 ## Handoff Log
+
+### 2026-04-05
+- Changed: added fast resume and pause scripts and updated the handoff rules so light-governance work can be parked and resumed immediately.
+- Verified: PowerShell parser PASS for `0.dev-matrix/resume-work.ps1` and `0.dev-matrix/pause-work.ps1`.
+- Operational proof: this light-governance repo now surfaces its current checkpoint through fast handoff scripts without needing a full runtime validation stack.
+- Continue from: keep this repo light-governance unless it becomes an actively validated product repo.
+- Next step: expand to a full dev-matrix baseline only if Office_Scripts becomes an actively validated software repo.
+- Blockers: no active runtime surface is currently defined for deeper automation.
 
 ### 2026-04-03
 - Changed: kept this repo intentionally light-governance and updated the handoff contract so continuity still exists even without a full runtime automation baseline.
