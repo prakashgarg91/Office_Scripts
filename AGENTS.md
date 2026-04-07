@@ -43,6 +43,13 @@ Testing is the key to quality.
 - Prefer proof over claims: tests, builds, typechecks, health checks, runtime checks, and repo-state verification.
 - Do not blindly trust OpenCode output without independent validation.
 
+### Dev-Matrix Workflow
+
+- Start with `0.dev-matrix/AI-HANDOFF.md`, then run `0.dev-matrix/resume-work.ps1` when it exists.
+- Use `0.dev-matrix/pause-work.ps1` for short stops and `0.dev-matrix/close-day.ps1` for true closeout when it exists.
+- In light-governance repos, close-day is handoff-first and does not invent launch evidence the repo does not support.
+- If `0.dev-matrix/ECOSYSTEM.md` exists, read it before changing launch priority, pricing, distribution, or product scope.
+
 ### Executive Reporting
 
 - Report progress in an executive-friendly way suitable for a non-coder CEO/CFO.

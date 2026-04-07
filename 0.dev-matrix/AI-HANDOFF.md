@@ -27,6 +27,14 @@ Update protocol:
 
 ## Handoff Log
 
+### 2026-04-07
+- Changed: added the light-governance close-day path, hook doc, AGENTS workflow note, and repo-age-aware resume script, then prepared the repo for a small governance-only commit.
+- Verified: PowerShell diagnostics were already clean for the new light close-day flow; `git status --short` shows only the light-governance rollout files.
+- Operational proof: this light repo now has truthful fast resume plus handoff-first close-day support without inventing runtime launch checks.
+- Continue from: create the light-governance commit, then rerun close-day only if a clean post-commit report is required.
+- Next step: commit the staged light-governance files and keep the repo light until it grows into an actively validated software project.
+- Blockers: the current working tree is still dirty from the rollout itself, so close-day stays red until those files are committed.
+
 ### 2026-04-05
 - Changed: added fast resume and pause scripts and updated the handoff rules so light-governance work can be parked and resumed immediately.
 - Verified: PowerShell parser PASS for `0.dev-matrix/resume-work.ps1` and `0.dev-matrix/pause-work.ps1`.
