@@ -90,3 +90,71 @@ Software is not complete unless the full chain works together professionally.
 - Prioritize end-to-end glue across UI, API, services, data, infra, background jobs, auth, and configuration.
 - Keep the codebase tree clean, professional, sustainable, and easy to onboard into; reduce drift, duplication, abandoned files, and misleading docs.
 - Update `0.dev-matrix/STATE.md`, `0.dev-matrix/TASK.md`, `0.dev-matrix/DISCUSSION.md`, `0.dev-matrix/DEPENDENCIES.md`, and `0.dev-matrix/PATTERNS.md` when reality changes.
+
+---
+
+## Qdrant Tool
+
+A shared semantic search + gap audit tool lives at `D:\Github\tools\qdrant_gap_audit.py`.
+It works across **all D:\Github projects** without Roo Code or any VS Code extension.
+
+### Two modes
+
+**Search mode** — find code by meaning (complements grep, not a replacement):
+```powershell
+# Find by concept when you don't know exact symbol names
+python D:\Github\tools\qdrant_gap_audit.py -q "payment webhook handler"
+
+# With real source lines shown (3 lines context, -> markers on hits)
+python D:\Github\tools\qdrant_gap_audit.py -q "auth session check" --context-lines 3
+
+# Filter by extension or filename pattern
+python D:\Github\tools\qdrant_gap_audit.py -q "form validation" --lang tsx --file-filter "*Page*"
+
+# Search whole repo, not just src-subpath
+python D:\Github\tools\qdrant_gap_audit.py -q "database schema" --all-files --top 30
+```
+
+**Gap audit mode** — scan 33 checks, write `0.dev-matrix/QDRANT_GAP_REPORT.md`:
+```powershell
+# Full audit (auto-discovers collection)
+cd D:\Github\<project>
+.venv\Scripts\python D:\Github\tools\qdrant_gap_audit.py
+
+# Specific checks only
+.venv\Scripts\python D:\Github\tools\qdrant_gap_audit.py --checks 1,2,3,27,28,29
+
+# Different project / subpath
+python D:\Github\tools\qdrant_gap_audit.py --workspace D:\Github\Blogger-MCP --src-subpath src
+```
+
+### When to use which tool
+
+| Query type | Use |
+|------------|-----|
+| Exact function/variable name | `grep` / `ripgrep` |
+| Exact error string | `grep` |
+| "Where is X handled?" — by concept | Qdrant `-q` |
+| "Find all auth checks" — by intent | Qdrant `-q` |
+| Full codebase health scan | Qdrant gap audit |
+
+### Per-project setup
+
+```powershell
+# React project (TruckOpti, Job-360, trading-rex-ai)
+python D:\Github\tools\qdrant_gap_audit.py --workspace . --src-subpath frontend/src --framework react
+
+# Next.js project
+python D:\Github\tools\qdrant_gap_audit.py --workspace . --src-subpath app --framework nextjs
+
+# Python backend
+python D:\Github\tools\qdrant_gap_audit.py --workspace . --src-subpath src --framework fastapi
+
+# Node.js / Express
+python D:\Github\tools\qdrant_gap_audit.py --workspace . --src-subpath src --framework express
+```
+
+Collection is **auto-discovered** — pass `--collection ws-xxx` only if auto-discovery fails.
+Falls back to Roo Code's Qdrant (port 6335) if no standalone index exists.
+
+Full reference: skill file at `c:\Users\Prakash\.copilot\skills\qdrant-gap-audit\SKILL.md`
