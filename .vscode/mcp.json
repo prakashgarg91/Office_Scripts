@@ -20,13 +20,25 @@
                                    "type":  "stdio"
                                },
                     "code-review-graph":  {
+                                              "type":  "stdio",
+                                              "command":  "C:/Users/Prakash/.venvs/code-review-graph/Scripts/python.exe",
                                               "args":  [
-                                                           "serve",
-                                                           "--repo",
-                                                           "D:\\Github\\Office_Scripts"
+                                                           "-m",
+                                                           "code_review_graph",
+                                                           "serve"
                                                        ],
-                                              "command":  "code-review-graph",
-                                              "type":  "stdio"
-                                          }
+                                              "env":  {
+                                                          "CRG_EMBEDDING_PROVIDER":  "ollama",
+                                                          "CRG_EMBEDDING_MODEL":  "nomic-embed-text-v2-moe:latest",
+                                                          "CRG_DISABLE_IGRAPH_COMMUNITIES":  "1"
+                                                      }
+                                          },
+                    "roo-index-bridge":  {
+                                             "type":  "stdio",
+                                             "command":  "node",
+                                             "args":  [
+                                                          "D:/Github/tools/roo-index-mcp-server.mjs"
+                                                      ]
+                                         }
                 }
 }

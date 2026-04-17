@@ -1,0 +1,592 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "label": "close-day.ps1",
+      "file_type": "code",
+      "source_file": "0.dev-matrix\\close-day.ps1",
+      "source_location": "L1",
+      "id": "0_dev_matrix_close_day_ps1",
+      "community": 0,
+      "norm_label": "close-day.ps1"
+    },
+    {
+      "label": "Log()",
+      "file_type": "code",
+      "source_file": "0.dev-matrix\\close-day.ps1",
+      "source_location": "L33",
+      "id": "close_day_log",
+      "community": 0,
+      "norm_label": "log()"
+    },
+    {
+      "label": "Gate()",
+      "file_type": "code",
+      "source_file": "0.dev-matrix\\close-day.ps1",
+      "source_location": "L38",
+      "id": "close_day_gate",
+      "community": 0,
+      "norm_label": "gate()"
+    },
+    {
+      "label": "ConvertTo-RepoRelativePath()",
+      "file_type": "code",
+      "source_file": "0.dev-matrix\\close-day.ps1",
+      "source_location": "L46",
+      "id": "close_day_convertto_reporelativepath",
+      "community": 0,
+      "norm_label": "convertto-reporelativepath()"
+    },
+    {
+      "label": "Get-StatusPath()",
+      "file_type": "code",
+      "source_file": "0.dev-matrix\\close-day.ps1",
+      "source_location": "L51",
+      "id": "close_day_get_statuspath",
+      "community": 0,
+      "norm_label": "get-statuspath()"
+    },
+    {
+      "label": "Test-IsAllowedRuntimeDirtyPath()",
+      "file_type": "code",
+      "source_file": "0.dev-matrix\\close-day.ps1",
+      "source_location": "L58",
+      "id": "close_day_test_isallowedruntimedirtypath",
+      "community": 0,
+      "norm_label": "test-isallowedruntimedirtypath()"
+    },
+    {
+      "label": "Get-HandoffFieldValue()",
+      "file_type": "code",
+      "source_file": "0.dev-matrix\\close-day.ps1",
+      "source_location": "L67",
+      "id": "close_day_get_handofffieldvalue",
+      "community": 0,
+      "norm_label": "get-handofffieldvalue()"
+    },
+    {
+      "label": "Get-LatestHandoffEntry()",
+      "file_type": "code",
+      "source_file": "0.dev-matrix\\close-day.ps1",
+      "source_location": "L77",
+      "id": "close_day_get_latesthandoffentry",
+      "community": 0,
+      "norm_label": "get-latesthandoffentry()"
+    },
+    {
+      "label": "Test-IsMeaningfulOperationalProof()",
+      "file_type": "code",
+      "source_file": "0.dev-matrix\\close-day.ps1",
+      "source_location": "L87",
+      "id": "close_day_test_ismeaningfuloperationalproof",
+      "community": 0,
+      "norm_label": "test-ismeaningfuloperationalproof()"
+    },
+    {
+      "label": "graphify.ps1",
+      "file_type": "code",
+      "source_file": "0.dev-matrix\\graphify.ps1",
+      "source_location": "L1",
+      "id": "0_dev_matrix_graphify_ps1",
+      "community": 1,
+      "norm_label": "graphify.ps1"
+    },
+    {
+      "label": "Require-Python()",
+      "file_type": "code",
+      "source_file": "0.dev-matrix\\graphify.ps1",
+      "source_location": "L31",
+      "id": "graphify_require_python",
+      "community": 1,
+      "norm_label": "require-python()"
+    },
+    {
+      "label": "Require-Graph()",
+      "file_type": "code",
+      "source_file": "0.dev-matrix\\graphify.ps1",
+      "source_location": "L37",
+      "id": "graphify_require_graph",
+      "community": 1,
+      "norm_label": "require-graph()"
+    },
+    {
+      "label": "Invoke-Graphify()",
+      "file_type": "code",
+      "source_file": "0.dev-matrix\\graphify.ps1",
+      "source_location": "L43",
+      "id": "graphify_invoke_graphify",
+      "community": 1,
+      "norm_label": "invoke-graphify()"
+    },
+    {
+      "label": "Invoke-GraphifyWiki()",
+      "file_type": "code",
+      "source_file": "0.dev-matrix\\graphify.ps1",
+      "source_location": "L55",
+      "id": "graphify_invoke_graphifywiki",
+      "community": 1,
+      "norm_label": "invoke-graphifywiki()"
+    },
+    {
+      "label": "Invoke-GraphifyHtml()",
+      "file_type": "code",
+      "source_file": "0.dev-matrix\\graphify.ps1",
+      "source_location": "L93",
+      "id": "graphify_invoke_graphifyhtml",
+      "community": 1,
+      "norm_label": "invoke-graphifyhtml()"
+    },
+    {
+      "label": "Get-SectionBullets()",
+      "file_type": "code",
+      "source_file": "0.dev-matrix\\graphify.ps1",
+      "source_location": "L120",
+      "id": "graphify_get_sectionbullets",
+      "community": 1,
+      "norm_label": "get-sectionbullets()"
+    },
+    {
+      "label": "pause-work.ps1",
+      "file_type": "code",
+      "source_file": "0.dev-matrix\\pause-work.ps1",
+      "source_location": "L1",
+      "id": "0_dev_matrix_pause_work_ps1",
+      "community": 3,
+      "norm_label": "pause-work.ps1"
+    },
+    {
+      "label": "Get-HandoffFieldValue()",
+      "file_type": "code",
+      "source_file": "0.dev-matrix\\pause-work.ps1",
+      "source_location": "L7",
+      "id": "pause_work_get_handofffieldvalue",
+      "community": 3,
+      "norm_label": "get-handofffieldvalue()"
+    },
+    {
+      "label": "Get-LatestHandoffEntry()",
+      "file_type": "code",
+      "source_file": "0.dev-matrix\\pause-work.ps1",
+      "source_location": "L17",
+      "id": "pause_work_get_latesthandoffentry",
+      "community": 3,
+      "norm_label": "get-latesthandoffentry()"
+    },
+    {
+      "label": "resume-work.ps1",
+      "file_type": "code",
+      "source_file": "0.dev-matrix\\resume-work.ps1",
+      "source_location": "L1",
+      "id": "0_dev_matrix_resume_work_ps1",
+      "community": 2,
+      "norm_label": "resume-work.ps1"
+    },
+    {
+      "label": "Get-HandoffFieldValue()",
+      "file_type": "code",
+      "source_file": "0.dev-matrix\\resume-work.ps1",
+      "source_location": "L6",
+      "id": "resume_work_get_handofffieldvalue",
+      "community": 2,
+      "norm_label": "get-handofffieldvalue()"
+    },
+    {
+      "label": "Get-LatestHandoffEntry()",
+      "file_type": "code",
+      "source_file": "0.dev-matrix\\resume-work.ps1",
+      "source_location": "L16",
+      "id": "resume_work_get_latesthandoffentry",
+      "community": 2,
+      "norm_label": "get-latesthandoffentry()"
+    },
+    {
+      "label": "Get-ChecklistFieldValue()",
+      "file_type": "code",
+      "source_file": "0.dev-matrix\\resume-work.ps1",
+      "source_location": "L26",
+      "id": "resume_work_get_checklistfieldvalue",
+      "community": 2,
+      "norm_label": "get-checklistfieldvalue()"
+    },
+    {
+      "label": "Get-RepoAgeInfo()",
+      "file_type": "code",
+      "source_file": "0.dev-matrix\\resume-work.ps1",
+      "source_location": "L36",
+      "id": "resume_work_get_repoageinfo",
+      "community": 2,
+      "norm_label": "get-repoageinfo()"
+    },
+    {
+      "label": "Get-LaunchCheckStatus()",
+      "file_type": "code",
+      "source_file": "0.dev-matrix\\resume-work.ps1",
+      "source_location": "L58",
+      "id": "resume_work_get_launchcheckstatus",
+      "community": 2,
+      "norm_label": "get-launchcheckstatus()"
+    },
+    {
+      "label": "Format-LaunchCheckStatus()",
+      "file_type": "code",
+      "source_file": "0.dev-matrix\\resume-work.ps1",
+      "source_location": "L68",
+      "id": "resume_work_format_launchcheckstatus",
+      "community": 2,
+      "norm_label": "format-launchcheckstatus()"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "0.dev-matrix\\close-day.ps1",
+      "source_location": "L33",
+      "weight": 1.0,
+      "_src": "0_dev_matrix_close_day_ps1",
+      "_tgt": "close_day_log",
+      "source": "0_dev_matrix_close_day_ps1",
+      "target": "close_day_log",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "0.dev-matrix\\close-day.ps1",
+      "source_location": "L38",
+      "weight": 1.0,
+      "_src": "0_dev_matrix_close_day_ps1",
+      "_tgt": "close_day_gate",
+      "source": "0_dev_matrix_close_day_ps1",
+      "target": "close_day_gate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "0.dev-matrix\\close-day.ps1",
+      "source_location": "L46",
+      "weight": 1.0,
+      "_src": "0_dev_matrix_close_day_ps1",
+      "_tgt": "close_day_convertto_reporelativepath",
+      "source": "0_dev_matrix_close_day_ps1",
+      "target": "close_day_convertto_reporelativepath",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "0.dev-matrix\\close-day.ps1",
+      "source_location": "L51",
+      "weight": 1.0,
+      "_src": "0_dev_matrix_close_day_ps1",
+      "_tgt": "close_day_get_statuspath",
+      "source": "0_dev_matrix_close_day_ps1",
+      "target": "close_day_get_statuspath",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "0.dev-matrix\\close-day.ps1",
+      "source_location": "L58",
+      "weight": 1.0,
+      "_src": "0_dev_matrix_close_day_ps1",
+      "_tgt": "close_day_test_isallowedruntimedirtypath",
+      "source": "0_dev_matrix_close_day_ps1",
+      "target": "close_day_test_isallowedruntimedirtypath",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "0.dev-matrix\\close-day.ps1",
+      "source_location": "L67",
+      "weight": 1.0,
+      "_src": "0_dev_matrix_close_day_ps1",
+      "_tgt": "close_day_get_handofffieldvalue",
+      "source": "0_dev_matrix_close_day_ps1",
+      "target": "close_day_get_handofffieldvalue",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "0.dev-matrix\\close-day.ps1",
+      "source_location": "L77",
+      "weight": 1.0,
+      "_src": "0_dev_matrix_close_day_ps1",
+      "_tgt": "close_day_get_latesthandoffentry",
+      "source": "0_dev_matrix_close_day_ps1",
+      "target": "close_day_get_latesthandoffentry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "0.dev-matrix\\close-day.ps1",
+      "source_location": "L87",
+      "weight": 1.0,
+      "_src": "0_dev_matrix_close_day_ps1",
+      "_tgt": "close_day_test_ismeaningfuloperationalproof",
+      "source": "0_dev_matrix_close_day_ps1",
+      "target": "close_day_test_ismeaningfuloperationalproof",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "0.dev-matrix\\close-day.ps1",
+      "source_location": "L43",
+      "weight": 1.0,
+      "_src": "close_day_gate",
+      "_tgt": "close_day_log",
+      "source": "close_day_log",
+      "target": "close_day_gate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "0.dev-matrix\\close-day.ps1",
+      "source_location": "L55",
+      "weight": 1.0,
+      "_src": "close_day_get_statuspath",
+      "_tgt": "close_day_convertto_reporelativepath",
+      "source": "close_day_convertto_reporelativepath",
+      "target": "close_day_get_statuspath",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "0.dev-matrix\\graphify.ps1",
+      "source_location": "L31",
+      "weight": 1.0,
+      "_src": "0_dev_matrix_graphify_ps1",
+      "_tgt": "graphify_require_python",
+      "source": "0_dev_matrix_graphify_ps1",
+      "target": "graphify_require_python",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "0.dev-matrix\\graphify.ps1",
+      "source_location": "L37",
+      "weight": 1.0,
+      "_src": "0_dev_matrix_graphify_ps1",
+      "_tgt": "graphify_require_graph",
+      "source": "0_dev_matrix_graphify_ps1",
+      "target": "graphify_require_graph",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "0.dev-matrix\\graphify.ps1",
+      "source_location": "L43",
+      "weight": 1.0,
+      "_src": "0_dev_matrix_graphify_ps1",
+      "_tgt": "graphify_invoke_graphify",
+      "source": "0_dev_matrix_graphify_ps1",
+      "target": "graphify_invoke_graphify",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "0.dev-matrix\\graphify.ps1",
+      "source_location": "L55",
+      "weight": 1.0,
+      "_src": "0_dev_matrix_graphify_ps1",
+      "_tgt": "graphify_invoke_graphifywiki",
+      "source": "0_dev_matrix_graphify_ps1",
+      "target": "graphify_invoke_graphifywiki",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "0.dev-matrix\\graphify.ps1",
+      "source_location": "L93",
+      "weight": 1.0,
+      "_src": "0_dev_matrix_graphify_ps1",
+      "_tgt": "graphify_invoke_graphifyhtml",
+      "source": "0_dev_matrix_graphify_ps1",
+      "target": "graphify_invoke_graphifyhtml",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "0.dev-matrix\\graphify.ps1",
+      "source_location": "L120",
+      "weight": 1.0,
+      "_src": "0_dev_matrix_graphify_ps1",
+      "_tgt": "graphify_get_sectionbullets",
+      "source": "0_dev_matrix_graphify_ps1",
+      "target": "graphify_get_sectionbullets",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "0.dev-matrix\\graphify.ps1",
+      "source_location": "L45",
+      "weight": 1.0,
+      "_src": "graphify_invoke_graphify",
+      "_tgt": "graphify_require_python",
+      "source": "graphify_require_python",
+      "target": "graphify_invoke_graphify",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "0.dev-matrix\\graphify.ps1",
+      "source_location": "L56",
+      "weight": 1.0,
+      "_src": "graphify_invoke_graphifywiki",
+      "_tgt": "graphify_require_python",
+      "source": "graphify_require_python",
+      "target": "graphify_invoke_graphifywiki",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "0.dev-matrix\\graphify.ps1",
+      "source_location": "L94",
+      "weight": 1.0,
+      "_src": "graphify_invoke_graphifyhtml",
+      "_tgt": "graphify_require_python",
+      "source": "graphify_require_python",
+      "target": "graphify_invoke_graphifyhtml",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "0.dev-matrix\\graphify.ps1",
+      "source_location": "L57",
+      "weight": 1.0,
+      "_src": "graphify_invoke_graphifywiki",
+      "_tgt": "graphify_require_graph",
+      "source": "graphify_require_graph",
+      "target": "graphify_invoke_graphifywiki",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "0.dev-matrix\\graphify.ps1",
+      "source_location": "L95",
+      "weight": 1.0,
+      "_src": "graphify_invoke_graphifyhtml",
+      "_tgt": "graphify_require_graph",
+      "source": "graphify_require_graph",
+      "target": "graphify_invoke_graphifyhtml",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "0.dev-matrix\\pause-work.ps1",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_src": "0_dev_matrix_pause_work_ps1",
+      "_tgt": "pause_work_get_handofffieldvalue",
+      "source": "0_dev_matrix_pause_work_ps1",
+      "target": "pause_work_get_handofffieldvalue",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "0.dev-matrix\\pause-work.ps1",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_src": "0_dev_matrix_pause_work_ps1",
+      "_tgt": "pause_work_get_latesthandoffentry",
+      "source": "0_dev_matrix_pause_work_ps1",
+      "target": "pause_work_get_latesthandoffentry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "0.dev-matrix\\resume-work.ps1",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_src": "0_dev_matrix_resume_work_ps1",
+      "_tgt": "resume_work_get_handofffieldvalue",
+      "source": "0_dev_matrix_resume_work_ps1",
+      "target": "resume_work_get_handofffieldvalue",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "0.dev-matrix\\resume-work.ps1",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_src": "0_dev_matrix_resume_work_ps1",
+      "_tgt": "resume_work_get_latesthandoffentry",
+      "source": "0_dev_matrix_resume_work_ps1",
+      "target": "resume_work_get_latesthandoffentry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "0.dev-matrix\\resume-work.ps1",
+      "source_location": "L26",
+      "weight": 1.0,
+      "_src": "0_dev_matrix_resume_work_ps1",
+      "_tgt": "resume_work_get_checklistfieldvalue",
+      "source": "0_dev_matrix_resume_work_ps1",
+      "target": "resume_work_get_checklistfieldvalue",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "0.dev-matrix\\resume-work.ps1",
+      "source_location": "L36",
+      "weight": 1.0,
+      "_src": "0_dev_matrix_resume_work_ps1",
+      "_tgt": "resume_work_get_repoageinfo",
+      "source": "0_dev_matrix_resume_work_ps1",
+      "target": "resume_work_get_repoageinfo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "0.dev-matrix\\resume-work.ps1",
+      "source_location": "L58",
+      "weight": 1.0,
+      "_src": "0_dev_matrix_resume_work_ps1",
+      "_tgt": "resume_work_get_launchcheckstatus",
+      "source": "0_dev_matrix_resume_work_ps1",
+      "target": "resume_work_get_launchcheckstatus",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "0.dev-matrix\\resume-work.ps1",
+      "source_location": "L68",
+      "weight": 1.0,
+      "_src": "0_dev_matrix_resume_work_ps1",
+      "_tgt": "resume_work_format_launchcheckstatus",
+      "source": "0_dev_matrix_resume_work_ps1",
+      "target": "resume_work_format_launchcheckstatus",
+      "confidence_score": 1.0
+    }
+  ],
+  "hyperedges": []
+}

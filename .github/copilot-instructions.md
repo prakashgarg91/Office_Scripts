@@ -8,27 +8,29 @@
 1. Read `0.dev-matrix/AI-HANDOFF.md` (latest entry)
 2. Read `0.dev-matrix/STATE.md`
 
-## Qdrant Search
+\
+## Roo Bridge MCP
+Use the workspace MCP server `roo-index-bridge` as the default semantic retrieval surface before falling back to grep or regex.
 
-**Collection**: `office-scripts-context` | Use `/qdrant` prompt for full reference.
+- `search_roo_index`: primary code-first semantic search for this repo and sibling repos under `D:\Github`
+- `detect_roo_index_collection`: verify workspace mapping when results look suspicious or the repo is newly onboarded
+- `list_roo_index_collections`: backend sanity check only
 
+Preferred retrieval stack for code work:
+
+1. Roo bridge targeted search
+2. Graphify structure map
+3. code-review-graph exact blast radius
+4. grep or regex for exact confirmation and registry cleanup
+
+Validation:
 ```powershell
-# Semantic search (intent-based â€” better than grep for concepts)
-cd D:\Github\Office_Scripts
-python D:\Github\tools\qdrant_gap_audit.py -q "YOUR QUERY" --context-lines 3
-
-# Index this repo (required before first search)
-python D:\Github\tools\qdrant_gap_audit.py --auto-index
-
-# Full 33-check gap audit (run before deploy)
-python D:\Github\tools\qdrant_gap_audit.py
-# â†’ writes 0.dev-matrix/QDRANT_GAP_REPORT.md
-
-# Critical security checks only (C1 auth, C11/C12 RLS, C14 N+1, C21 secrets, C27 unguarded write)
-python D:\Github\tools\qdrant_gap_audit.py --checks 1,11,12,14,21,27
+node D:\Github\tools\roo-index-smoke.mjs --workspace D:\Github\Office_Scripts
+node D:\Github\tools\roo-index-sync-mcp.mjs --all --apply
 ```
 
-> Use `/qdrant` in chat for the complete guide with score interpretation and check catalog.
+> Docs-mode can still rely partly on the shared local markdown fallback when vector recall misses the best chunk, so confirm hits against real files before editing.
+
 ## Close-Day
 ```powershell
 npm run close-day

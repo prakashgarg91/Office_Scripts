@@ -126,9 +126,10 @@ get_minimal_context(task="<what you're about to do>")
 ```
 This costs ~100 tokens and prevents wasted work on call graph / blast radius surprises.
 
-### 15. Qdrant Semantic Search Before grep
-When looking for code by intent or behaviour, use the Qdrant MCP semantic search first.
-Reserve grep/file_search for exact string matching after Qdrant has narrowed the candidates.
+### 15. Roo Bridge Semantic Search Before grep
+When looking for code by intent or behaviour, use the Roo bridge MCP tools first.
+Start with `search_roo_index`; use `detect_roo_index_collection` when workspace mapping needs confirmation.
+Reserve grep/file_search for exact string matching after Roo has narrowed the candidates.
 
 ---
 

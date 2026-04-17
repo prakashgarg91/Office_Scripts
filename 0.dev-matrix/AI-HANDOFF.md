@@ -27,6 +27,14 @@ Update protocol:
 
 ## Handoff Log
 
+### 2026-04-16 — Shared Roo bridge guidance
+- Changed: recorded the shared Roo bridge limitation and the standard cross-repo onboarding and validation commands for this repo after the repo-local `roo-index-bridge` MCP registration rollout.
+- Verified: none locally; this is a guidance-only handoff note based on the shared rollout already validated from `D:/Github/tools` and Telegram-MCP.
+- Operational proof: this repo's `.vscode/mcp.json` now includes `roo-index-bridge` pointing at `D:/Github/tools/roo-index-mcp-server.mjs`, and the shared `roo-index-sync-mcp --all --apply` pass is now idempotent.
+- Continue from: use repo-local Roo registration by default in this repo, but remember docs-mode still partly depends on the local fallback when Roo's vector index misses the best doc chunks; ranking quality is bounded by the repo's docs corpus until better feature docs exist.
+- Next step: use `npm run roo:index:sync-mcp -- --all --apply` from `D:/Github/tools` or `D:/Github/Telegram-MCP` when onboarding or restamping repos, and use `node D:/Github/tools/roo-index-smoke.mjs --workspace D:/Github/<repo>` to validate standalone behavior for the repo you are working in.
+- Blockers: docs precision can still drift toward fallback-driven results in repos with thin or governance-heavy docs until the Roo index surfaces better doc chunks or the repo gains stronger feature docs.
+
 ### 2026-04-07
 - Changed: added the light-governance close-day path, hook doc, AGENTS workflow note, and repo-age-aware resume script, then prepared the repo for a small governance-only commit.
 - Verified: PowerShell diagnostics were already clean for the new light close-day flow; `git status --short` shows only the light-governance rollout files.
