@@ -1,4 +1,6 @@
-# AI Handoff
+### 2026-05-10 — Task Board Seeded
+- Added the first repo-local `0.dev-matrix/TASK.md` for Office_Scripts so the repo now reports tracked completion.
+- Next: catalog scripts and mark the repo explicitly as active-maintenance versus archive-only.# AI Handoff
 
 Purpose: keep a short, durable handoff for future AI work in this repo.
 

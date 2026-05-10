@@ -198,15 +198,19 @@ get_minimal_context(task="<description>")   # ~100 tokens, full picture
 
 ---
 
-### Pattern: Semantic Search Before Grep
+### Pattern: Roo Bridge And Graphify Before Grep
 ```
 # For intent/behaviour queries:
-qdrant_search(query="payment webhook processing")
+search_roo_index(query="payment webhook processing", scope="code")
+
+# For architecture and gap questions after semantic narrowing:
+read graphify-out/GRAPH_REPORT.md
+powershell -ExecutionPolicy Bypass -File .\0.dev-matrix\graphify.ps1 -Query "payment webhook processing"
 
 # For exact strings only after semantic narrowing:
 grep_search(query="verifyWebhookSignature")
 ```
-**Why:** Semantic search surfaces all relevant code regardless of exact naming. Grep misses refactored names.
+**Why:** Roo bridge surfaces the right code neighborhood by intent, Graphify highlights structural gaps and community boundaries, and grep confirms exact strings after the graph layer narrows the search surface.
 
 ---
 

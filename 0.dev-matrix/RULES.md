@@ -131,6 +131,15 @@ When looking for code by intent or behaviour, use the Roo bridge MCP tools first
 Start with `search_roo_index`; use `detect_roo_index_collection` when workspace mapping needs confirmation.
 Reserve grep/file_search for exact string matching after Roo has narrowed the candidates.
 
+### 16. Junie Stays User-Scope By Default
+If Junie is used in a repo, prefer the hardened user-scope wrapper and config on this machine:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File C:\Users\Prakash\.junie\junie-zai.ps1 --project D:\Github\<repo>
+```
+
+Do not create or commit repo-local `.junie/` just because Junie offers to import AGENTS, MCP, or skills on first run. Only add repo-local `.junie/` when the repo truly needs Junie-specific shared behavior that cannot be handled by root `AGENTS.md`, existing repo docs, or user-scope Junie MCP.
+
 ---
 
 ## 📎 SEE ALSO
@@ -143,3 +152,4 @@ Reserve grep/file_search for exact string matching after Roo has narrowed the ca
 | `CONTEXT-ENGINEERING.md` | How to keep AI context accurate and efficient |
 | `PATTERNS.md` | Approved implementation patterns |
 | `TREE-HYGIENE.md` | Repo cleanliness standard |
+| `JUNIE.md` | Junie role, use cases, setup, and repo-local `.junie` policy |

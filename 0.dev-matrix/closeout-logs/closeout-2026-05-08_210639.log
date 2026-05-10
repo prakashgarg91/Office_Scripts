@@ -1,0 +1,7 @@
+[PASS] light runtime docs - handoff/resume/pause/close-day docs present
+[PASS] background launch-check - light-governance repo; no background launch-check configured
+[PASS] close-day handoff mode - light repo close-day records handoff and git status without inventing launch verification
+[FAIL] status update discipline - repo changed without AI-HANDOFF update
+[FAIL] working tree cleanliness - dirty working tree outside runtime handoff: .github/hooks/session-start-context.ps1, 0.dev-matrix/close-day.ps1, 0.dev-matrix/resume-work.ps1, graphify-out/GRAPH_REPORT.md, graphify-out/graph.html
+[FAIL] handoff continuity - latest entry dated 2026-04-16; expected 2026-05-08
+[PASS] operational proof - latest entry records operational proof
