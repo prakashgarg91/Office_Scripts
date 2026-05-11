@@ -1,0 +1,117 @@
+=== Session Start Maintenance ===
+Started: 2026-05-11T21:25:28
+Repo: D:\Github\Office_Scripts
+--- code-review-graph update --repo ---
+code-review-graph.exe : INFO: FTS index rebuilt: 8 rows indexed
+At D:\Github\0.dev-matrix\session-start-maintenance.shared.ps1:114 char:15
++     $output = & $commandPath @arguments 2>&1 | Out-String
++               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (INFO: FTS index rebuilt: 8 rows indexed:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Incremental: 42 files updated, 0 nodes, 0 edges (postprocess=full)
+--- roo-index smoke ---
+node.exe : 
+At D:\Github\0.dev-matrix\session-start-maintenance.shared.ps1:114 char:15
++     $output = & $commandPath @arguments 2>&1 | Out-String
++               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+
++-----------------------------------------------------------------------------+
+|                                                                             |
+|                                                                             |
+|                        \u2584\u2580\u2580 \u2584\u2580\u2588 \u2588\u2580\u2580 \u2580\u2588\u2580 
+\u2588\u2580\u2584\u2580\u2588 \u2588\u2580\u2580 \u2588\u2580\u2588                        |
+|                        \u2588\u2580  \u2588\u2580\u2588 \u2584\u2584\u2588  \u2588  \u2588 \u2580 \u2588 
+\u2588\u2584\u2584 \u2588\u2580\u2580                        |
+|                                                                             |
+|                                                                             |
+|                                                                             |
+|                                FastMCP 3.2.4                                |
+|                            https://gofastmcp.com                            |
+|                                                                             |
+|              \U0001f5a5  Server:      roo-code-index-bridge-mcp, 3.2.4               |
+|              \U0001f680 Deploy free: https://horizon.prefect.io                     |
+|                                                                             |
++-----------------------------------------------------------------------------+
+
+
+[05/11/26 21:25:34] INFO     Starting MCP server               transport.py:209
+                             'roo-code-index-bridge-mcp' with                  
+                             transport 'stdio'                                 
+shared health returned unusable workspace status
+{
+  "config_path": "C:\\Users\\Prakash\\AppData\\Roaming\\Code\\User\\mcp-tools\\roo_code_index_bridge_config.json",
+  "qdrant_url": "http://localhost:6335",
+  "embedder_provider": "ollama",
+  "embedder_model": "nomic-embed-text-v2-moe:latest",
+  "embedder_base_url": "http://localhost:11434",
+  "default_limit": 12,
+  "default_min_score": 0.4,
+  "local_cache_dir": "C:\\Users\\Prakash\\AppData\\Roaming\\Code\\User\\globalStorage\\rooveterinaryinc.roo-cline",
+  "qdrant": {
+    "status": "ok",
+    "collection_count": 19,
+    "collections_preview": [
+      "ws-6d0e1cbdc8837feb",
+      "ws-6df6af38d373c83b",
+      "ws-27732aa8d13526f4",
+      "ws-252671d14873180d",
+      "ws-0bacb28cd552f3b7",
+      "ws-c04af1019093d877",
+      "ws-4f21603e3947f3f2",
+      "ws-7cd2003eba4bd9c5",
+      "ws-863251211f5a23c6",
+      "ws-4c888fcb4ce99bd8"
+    ]
+  },
+  "embedder": {
+    "status": "ok",
+    "model_count": 4
+  },
+  "workspace": {
+    "status": "error",
+    "workspace_path": "D:\\Github\\Office_Scripts",
+    "error": "No Roo Code index collection matched the workspace path 'D:\\Github\\Office_Scripts'. Checked: 
+ws-40f5aa8e1e416b8b, ws-a1cf68389496075c, ws-c133cb7abb5fd663, ws-5d42053238a8ea66. Available collections on 
+http://localhost:6335: ws-6d0e1cbdc8837feb, ws-6df6af38d373c83b, ws-27732aa8d13526f4, ws-252671d14873180d, 
+ws-0bacb28cd552f3b7, ws-c04af1019093d877, ws-4f21603e3947f3f2, ws-7cd2003eba4bd9c5, ws-863251211f5a23c6, 
+ws-4c888fcb4ce99bd8. Ensure Roo Code codebase indexing is enabled and configured against the same Qdrant backend and 
+embedder family."
+  }
+}
+--- graphify status ---
+=== Graphify Status ===
+Repo: Office_Scripts
+Python: D:\Github\Office_Scripts\.venv\Scripts\python.exe
+- Report: graphify-out/GRAPH_REPORT.md
+- Graph: graphify-out/graph.json
+- HTML: graphify-out/graph.html
+- Wiki: graphify-out/wiki/index.md
+- 7 files · ~13,548 words
+- Verdict: corpus is large enough that graph structure adds value.
+- 23 nodes · 23 edges · 7 communities detected
+- Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
+
+Common commands
+- Refresh: powershell -ExecutionPolicy Bypass -File .\0.dev-matrix\graphify.ps1 -Refresh
+- Wiki:    powershell -ExecutionPolicy Bypass -File .\0.dev-matrix\graphify.ps1 -Wiki
+- Query:   powershell -ExecutionPolicy Bypass -File .\0.dev-matrix\graphify.ps1 -Query "your query"
+- Explain: powershell -ExecutionPolicy Bypass -File .\0.dev-matrix\graphify.ps1 -Explain "NodeName"
+- Path:    powershell -ExecutionPolicy Bypass -File .\0.dev-matrix\graphify.ps1 -PathFrom "A" -PathTo "B"
+- Serve:   powershell -ExecutionPolicy Bypass -File .\0.dev-matrix\graphify.ps1 -Serve
+- Refresh + wiki: powershell -ExecutionPolicy Bypass -File .\0.dev-matrix\graphify.ps1 -Refresh -Wiki
+- Full multimodal refresh: /graphify .
+--- graphify.ps1 -Refresh ---
+Re-extracting code files in . (no LLM needed)...
+[graphify watch] Rebuilt: 23 nodes, 23 edges, 7 communities
+[graphify watch] graph.json and GRAPH_REPORT.md updated in graphify-out
+Code graph updated. For doc/paper/image changes run /graphify --update in your AI assistant.
+HTML written: D:\Github\Office_Scripts\graphify-out\graph.html
+--- graphify hooks status ---
+post-commit: not installed
+post-checkout: not installed
+Finished: 2026-05-11T21:25:41
+Summary: session-start maintenance completed with failures

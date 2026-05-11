@@ -29,6 +29,14 @@ Update protocol:
 
 ## Handoff Log
 
+### 2026-05-11 — Session-start maintenance, graphify refresh, MCP and skill updates
+- Changed: session-start-context.ps1 hook updated; .vscode/mcp.json refreshed; two new OpenHarness SKILL.md files added; graphify-out (graph.json, graph.html, GRAPH_REPORT.md) regenerated; delivery-intelligence.json and session-start-maintenance-status.json updated.
+- Verified: close-day.ps1 governance checks ran; working tree captured and committed.
+- Operational proof: graphify graph rebuilt successfully; session-start maintenance status recorded in test-reports.
+- Continue from: repo is in maintenance/governance state; no active feature work in progress.
+- Next step: begin OFF-101 — catalog the current scripts, owners, and use cases so the repo stops being a blind archive.
+- Blockers: none.
+
 ### 2026-04-16 — Shared Roo bridge guidance
 - Changed: recorded the shared Roo bridge limitation and the standard cross-repo onboarding and validation commands for this repo after the repo-local `roo-index-bridge` MCP registration rollout.
 - Verified: none locally; this is a guidance-only handoff note based on the shared rollout already validated from `D:/Github/tools` and Telegram-MCP.

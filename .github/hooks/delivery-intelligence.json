@@ -1,0 +1,20 @@
+﻿{
+  "hooks": {
+    "SessionStart": [
+      {
+        "type": "command",
+        "description": "Inject delivery-intelligence hub context at session start",
+        "windows": "powershell -ExecutionPolicy Bypass -File D:\\Github\\PPF-Past-Present-Future\\tools\\hook-delivery-intelligence-session-start.ps1",
+        "timeout": 20
+      }
+    ],
+    "Stop": [
+      {
+        "type": "command",
+        "description": "Remind capture and summary workflow at session end",
+        "windows": "powershell -ExecutionPolicy Bypass -File D:\\Github\\PPF-Past-Present-Future\\tools\\hook-delivery-intelligence-stop.ps1",
+        "timeout": 20
+      }
+    ]
+  }
+}

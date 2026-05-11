@@ -148,12 +148,21 @@
       "norm_label": "get-sectionbullets()"
     },
     {
+      "label": "openharness.ps1",
+      "file_type": "code",
+      "source_file": "0.dev-matrix\\openharness.ps1",
+      "source_location": "L1",
+      "id": "0_dev_matrix_openharness_ps1",
+      "community": 3,
+      "norm_label": "openharness.ps1"
+    },
+    {
       "label": "pause-work.ps1",
       "file_type": "code",
       "source_file": "0.dev-matrix\\pause-work.ps1",
       "source_location": "L1",
       "id": "0_dev_matrix_pause_work_ps1",
-      "community": 3,
+      "community": 2,
       "norm_label": "pause-work.ps1"
     },
     {
@@ -162,7 +171,7 @@
       "source_file": "0.dev-matrix\\pause-work.ps1",
       "source_location": "L7",
       "id": "pause_work_get_handofffieldvalue",
-      "community": 3,
+      "community": 2,
       "norm_label": "get-handofffieldvalue()"
     },
     {
@@ -171,8 +180,17 @@
       "source_file": "0.dev-matrix\\pause-work.ps1",
       "source_location": "L17",
       "id": "pause_work_get_latesthandoffentry",
-      "community": 3,
+      "community": 2,
       "norm_label": "get-latesthandoffentry()"
+    },
+    {
+      "label": "project-progress.ps1",
+      "file_type": "code",
+      "source_file": "0.dev-matrix\\project-progress.ps1",
+      "source_location": "L1",
+      "id": "0_dev_matrix_project_progress_ps1",
+      "community": 4,
+      "norm_label": "project-progress.ps1"
     },
     {
       "label": "resume-work.ps1",
@@ -180,62 +198,17 @@
       "source_file": "0.dev-matrix\\resume-work.ps1",
       "source_location": "L1",
       "id": "0_dev_matrix_resume_work_ps1",
-      "community": 2,
+      "community": 5,
       "norm_label": "resume-work.ps1"
     },
     {
-      "label": "Get-HandoffFieldValue()",
+      "label": "session-start-maintenance.ps1",
       "file_type": "code",
-      "source_file": "0.dev-matrix\\resume-work.ps1",
-      "source_location": "L6",
-      "id": "resume_work_get_handofffieldvalue",
-      "community": 2,
-      "norm_label": "get-handofffieldvalue()"
-    },
-    {
-      "label": "Get-LatestHandoffEntry()",
-      "file_type": "code",
-      "source_file": "0.dev-matrix\\resume-work.ps1",
-      "source_location": "L16",
-      "id": "resume_work_get_latesthandoffentry",
-      "community": 2,
-      "norm_label": "get-latesthandoffentry()"
-    },
-    {
-      "label": "Get-ChecklistFieldValue()",
-      "file_type": "code",
-      "source_file": "0.dev-matrix\\resume-work.ps1",
-      "source_location": "L26",
-      "id": "resume_work_get_checklistfieldvalue",
-      "community": 2,
-      "norm_label": "get-checklistfieldvalue()"
-    },
-    {
-      "label": "Get-RepoAgeInfo()",
-      "file_type": "code",
-      "source_file": "0.dev-matrix\\resume-work.ps1",
-      "source_location": "L36",
-      "id": "resume_work_get_repoageinfo",
-      "community": 2,
-      "norm_label": "get-repoageinfo()"
-    },
-    {
-      "label": "Get-LaunchCheckStatus()",
-      "file_type": "code",
-      "source_file": "0.dev-matrix\\resume-work.ps1",
-      "source_location": "L58",
-      "id": "resume_work_get_launchcheckstatus",
-      "community": 2,
-      "norm_label": "get-launchcheckstatus()"
-    },
-    {
-      "label": "Format-LaunchCheckStatus()",
-      "file_type": "code",
-      "source_file": "0.dev-matrix\\resume-work.ps1",
-      "source_location": "L68",
-      "id": "resume_work_format_launchcheckstatus",
-      "community": 2,
-      "norm_label": "format-launchcheckstatus()"
+      "source_file": "0.dev-matrix\\session-start-maintenance.ps1",
+      "source_location": "L1",
+      "id": "0_dev_matrix_session_start_maintenance_ps1",
+      "community": 6,
+      "norm_label": "session-start-maintenance.ps1"
     }
   ],
   "links": [
@@ -513,78 +486,6 @@
       "_tgt": "pause_work_get_latesthandoffentry",
       "source": "0_dev_matrix_pause_work_ps1",
       "target": "pause_work_get_latesthandoffentry",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "0.dev-matrix\\resume-work.ps1",
-      "source_location": "L6",
-      "weight": 1.0,
-      "_src": "0_dev_matrix_resume_work_ps1",
-      "_tgt": "resume_work_get_handofffieldvalue",
-      "source": "0_dev_matrix_resume_work_ps1",
-      "target": "resume_work_get_handofffieldvalue",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "0.dev-matrix\\resume-work.ps1",
-      "source_location": "L16",
-      "weight": 1.0,
-      "_src": "0_dev_matrix_resume_work_ps1",
-      "_tgt": "resume_work_get_latesthandoffentry",
-      "source": "0_dev_matrix_resume_work_ps1",
-      "target": "resume_work_get_latesthandoffentry",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "0.dev-matrix\\resume-work.ps1",
-      "source_location": "L26",
-      "weight": 1.0,
-      "_src": "0_dev_matrix_resume_work_ps1",
-      "_tgt": "resume_work_get_checklistfieldvalue",
-      "source": "0_dev_matrix_resume_work_ps1",
-      "target": "resume_work_get_checklistfieldvalue",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "0.dev-matrix\\resume-work.ps1",
-      "source_location": "L36",
-      "weight": 1.0,
-      "_src": "0_dev_matrix_resume_work_ps1",
-      "_tgt": "resume_work_get_repoageinfo",
-      "source": "0_dev_matrix_resume_work_ps1",
-      "target": "resume_work_get_repoageinfo",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "0.dev-matrix\\resume-work.ps1",
-      "source_location": "L58",
-      "weight": 1.0,
-      "_src": "0_dev_matrix_resume_work_ps1",
-      "_tgt": "resume_work_get_launchcheckstatus",
-      "source": "0_dev_matrix_resume_work_ps1",
-      "target": "resume_work_get_launchcheckstatus",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "0.dev-matrix\\resume-work.ps1",
-      "source_location": "L68",
-      "weight": 1.0,
-      "_src": "0_dev_matrix_resume_work_ps1",
-      "_tgt": "resume_work_format_launchcheckstatus",
-      "source": "0_dev_matrix_resume_work_ps1",
-      "target": "resume_work_format_launchcheckstatus",
       "confidence_score": 1.0
     }
   ],

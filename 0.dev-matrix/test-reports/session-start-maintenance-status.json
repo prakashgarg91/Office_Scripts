@@ -1,12 +1,12 @@
 {
-    "State":  "passed",
-    "StartedAt":  "2026-05-10T18:23:26",
-    "FinishedAt":  "2026-05-10T18:23:31",
-    "DurationMinutes":  0.08,
-    "ExitCode":  0,
-    "Pid":  26656,
-    "Log":  "0.dev-matrix/test-reports/session-start-maintenance-20260510_182326.log",
-    "Summary":  "session-start maintenance completed successfully",
+    "State":  "failed",
+    "StartedAt":  "2026-05-11T21:25:28",
+    "FinishedAt":  "2026-05-11T21:25:41",
+    "DurationMinutes":  0.21,
+    "ExitCode":  1,
+    "Pid":  42300,
+    "Log":  "0.dev-matrix/test-reports/session-start-maintenance-20260511_212528.log",
+    "Summary":  "session-start maintenance completed with failures",
     "Steps":  [
                   {
                       "Label":  "code-review-graph update",
@@ -14,14 +14,19 @@
                       "Detail":  "incremental code-review-graph refresh completed"
                   },
                   {
+                      "Label":  "roo-index smoke",
+                      "State":  "failed",
+                      "Detail":  "roo bridge smoke failed"
+                  },
+                  {
                       "Label":  "graphify status",
                       "State":  "checked",
-                      "Detail":  "graphify status checked; root graph report is 45.3 hour(s) old"
+                      "Detail":  "graphify status checked; root graph report is 27 hour(s) old; local summary 23 nodes / 23 edges / 7 communities"
                   },
                   {
                       "Label":  "graphify refresh",
                       "State":  "refreshed",
-                      "Detail":  "graphify report was stale at 45.3 hour(s) and was refreshed via graphify.ps1 -Refresh"
+                      "Detail":  "graphify report was stale at 27 hour(s) and was refreshed via graphify.ps1 -Refresh; local summary 23 nodes / 23 edges / 7 communities"
                   },
                   {
                       "Label":  "graphify hooks status",
