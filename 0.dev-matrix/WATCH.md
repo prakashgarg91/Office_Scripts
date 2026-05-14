@@ -70,7 +70,7 @@ D:\Github\
 │   │   │   └── system-reconciler.agent.md
 │   │   └── hooks\
 │   │       ├── watch-session.json   ← Per-repo session hook
-│       └── delivery-intelligence.json ← Bridge to central delivery hub
+│   │       └── delivery-intelligence.json ← Bridge to central delivery hub
 │   ├── .openharness\
 │   │   └── skills\
 │   │       └── launch-revenue\
@@ -106,6 +106,26 @@ D:\Github\
 | `Truck_Opti_verify_packing` | Python | P0 Support | Launch |
 
 ---
+
+## Shared Asset Intake
+
+For repo-operations reuse, audit `D:\Github\Office_Scripts\Shared-scripts\` as an optional secondary source, not as the canonical automation root.
+
+Current audit snapshot (`2026-05-14`):
+
+- `openrouter-free-model-fallbacks.ts` is executable code and can help AI runtime model selection, but it belongs to product/provider fallback logic rather than 0.dev-matrix operations.
+- `Skills/canva-professional-book-editing/` is guidance-only and design-specific.
+- `Skills/chatgpt-nano-banana-image-generation/` is guidance-only and asset-pipeline-specific.
+
+Operational rule:
+
+- Prefer shared repo-operations helpers from `D:\Github\0.dev-matrix\` first.
+- Treat `Shared-scripts` skills as guidance only unless they directly automate handoff, close-day, resume/start-day, validation, guardrails, or repo-status work.
+- Treat shared AI/model-selection utilities such as `openrouter-free-model-fallbacks.ts` as product-runtime helpers, not governance helpers.
+- Do not copy non-operational helpers into repo governance just because they are shared.
+- Re-audit `Shared-scripts` only when new repo-operations assets land there.
+
+This keeps repo governance aligned to the actual shared automation root while still leaving a clear intake path for future reusable automation.
 
 ## Session Start Protocol
 

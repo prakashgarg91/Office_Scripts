@@ -29,6 +29,23 @@ Update protocol:
 
 ## Handoff Log
 
+### 2026-05-14 — shared-scripts intake boundary codified
+
+- Changed: audited `D:\Github\Office_Scripts\Shared-scripts\` for reusable repo-operations assets and updated `0.dev-matrix/WATCH.md` with an explicit intake rule so future sessions do not re-audit unrelated shared design skills or non-operational helpers.
+- Verified: exact inventory check found only five files under `Shared-scripts`: one executable helper (`openrouter-free-model-fallbacks.ts`) and four design-skill files under Canva and ChatGPT/Nano Banana image-generation skills. None automate close-day, resume/start-day, handoff quality, validation runners, repo-status reporting, or guardrail checks.
+- Operational proof: this repo should keep using `D:\Github\0.dev-matrix\` as the canonical shared repo-operations source; the shared-scripts audit confirmed there is nothing safer or more relevant there to replace current repo-operation surfaces right now.
+- Continue from: keep the current repo queue and launch slice in `TASK.md` / `STATE.md`; treat `Shared-scripts` as optional and currently non-operational for repo governance.
+- Next step: resume the existing queue instead of widening into unrelated shared asset copying.
+- Blockers: none from `Shared-scripts`; only the repo's existing queue or launch blockers remain.
+
+### 2026-05-14 — queue truth aligned to OFF-* automation slice
+- Changed: synced `0.dev-matrix/TASK.md` and `0.dev-matrix/STATE.md` to the canonical `OFF-*` queue so `OFF-101` and `OFF-102` are the active automation-bundle slice, with `OFF-103` ready and `OFF-104` planned.
+- Verified: `powershell -ExecutionPolicy Bypass -File .\0.dev-matrix\sync-two-task-loop.ps1 -Mode manual` returned `active: OFF-101, OFF-102` and `next: OFF-103, OFF-104` with `normalization: none`.
+- Operational proof: Office_Scripts now exposes the current automation-bundle queue directly instead of reusing the earlier script-catalog idea list with conflicting `OFF-*` meanings.
+- Continue from: keep work constrained to `OFF-101` and `OFF-102` until the first shippable automation bundle and its contract artifact are explicit enough to run `OFF-103` as one reusable proof slice.
+- Next step: pick one reusable automation bundle, define its contract, and keep the repo light until that first validated bundle is clear.
+- Blockers: none beyond choosing and scoping the first reusable automation bundle.
+
 ### 2026-05-11 — Session-start maintenance, graphify refresh, MCP and skill updates
 - Changed: session-start-context.ps1 hook updated; .vscode/mcp.json refreshed; two new OpenHarness SKILL.md files added; graphify-out (graph.json, graph.html, GRAPH_REPORT.md) regenerated; delivery-intelligence.json and session-start-maintenance-status.json updated.
 - Verified: close-day.ps1 governance checks ran; working tree captured and committed.

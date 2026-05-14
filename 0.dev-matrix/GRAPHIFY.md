@@ -45,7 +45,7 @@ powershell -ExecutionPolicy Bypass -File .\0.dev-matrix\graphify.ps1 -Refresh
 This runs:
 
 ```powershell
-d:\Github\Office_Scripts\.venv\Scripts\python.exe -m graphify update .
+d:\Github\0.dev-matrix\.venv\Scripts\python.exe -m graphify update .
 ```
 
 Outputs:
@@ -72,6 +72,15 @@ If a graph already exists:
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\0.dev-matrix\graphify.ps1 -Status
 ```
+
+For repos that implement a start-of-day maintenance helper, the preferred startup behavior is:
+
+- refresh `code-review-graph` incrementally
+- check Graphify freshness with `graphify.ps1 -Status`
+- refresh Graphify only when the report is stale or missing
+- check `graphify.ps1 -HooksStatus`
+
+Use this freshness-aware startup path instead of forcing a full Graphify rebuild on every session start.
 
 Then read:
 
@@ -127,11 +136,11 @@ Suggested MCP server snippet for a user-managed `.vscode/mcp.json`:
 {
   "graphify": {
     "type": "stdio",
-    "command": "d:/Github/Office_Scripts/.venv/Scripts/python.exe",
+    "command": "d:/Github/0.dev-matrix/.venv/Scripts/python.exe",
     "args": [
       "-m",
       "graphify.serve",
-      "d:/Github/Office_Scripts/graphify-out/graph.json"
+      "d:/Github/0.dev-matrix/graphify-out/graph.json"
     ]
   }
 }

@@ -1,6 +1,8 @@
 # TASK — Office_Scripts
 
 > Scope: low-priority Office automation workspace and script catalog
+>
+> **Queue normalization note (2026-05-14):** the canonical machine-owned queue now lives in `0.dev-matrix/AI-TASKS.json`. Active pair: `OFF-101` define the first shippable automation bundle and `OFF-102` add the automation contract artifact. `OFF-103` is the first reusable automation proof slice, and `OFF-104` is the evidence-capture follow-through. The queue below supersedes the earlier script-catalog idea list that reused `OFF-*` IDs differently.
 
 ---
 
@@ -8,10 +10,15 @@
 
 | ID | Task | Type | Owner | Status |
 |----|------|------|-------|--------|
-| OFF-101 | Catalog the current scripts, owners, and use cases so the repo stops being a blind archive | Docs | AI | 🔲 TODO |
-| OFF-102 | Group scripts by Excel VBA, Office Scripts, and Power Query with a simple index and run notes | Docs | AI | 🔲 TODO |
-| OFF-103 | Identify which scripts are still production-useful versus archive-only and mark them explicitly | Audit | AI | 🔲 TODO |
-| OFF-104 | Add a minimal validation or smoke-run pattern for the most important scripts | Test | AI | 🔲 TODO |
+| OFF-101 | Define the first shippable automation bundle | Scope | CANONICAL QUEUE | 🟡 Active |
+| OFF-102 | Add the automation contract artifact | Contract | CANONICAL QUEUE | 🟡 Active |
+
+## NEXT TASKS
+
+| ID | Task | Type | Owner | Status |
+|----|------|------|-------|--------|
+| OFF-103 | Validate the first reusable automation slice | Validation | CANONICAL QUEUE | 🟢 Ready |
+| OFF-104 | Capture normalized Office automation evidence | Proof | CANONICAL QUEUE | ⚪ Planned |
 
 ## COMPLETED TASKS
 
