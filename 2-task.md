@@ -4,41 +4,18 @@ This file is auto-generated from 0.dev-matrix/AI-TASKS.json.
 
 ## Current 2 Active Tasks
 
-1. OFF-101 - Define the first shippable automation bundle
-- Priority: P1 | Phase: analyze | Status: active
-- Owner files: README.md, 0.dev-matrix/LAUNCH_CHECKLIST.md, 0.dev-matrix/TASK.md, 0.dev-matrix/AI-HANDOFF.md
-- Why: The repo has a broad Office automation description, but it still lacks one explicit reusable bundle as the current delivery slice.
-- Done when: The repo names one explicit VBA, Power Query, or Office Script bundle as the current validated delivery target.
-- Validate: powershell -ExecutionPolicy Bypass -File ./0.dev-matrix/launch-check.ps1 ; powershell -ExecutionPolicy Bypass -File ./0.dev-matrix/repo-layout-index.ps1
-- Business value: Turns Office_Scripts into a reusable automation asset instead of a generic script bucket.
-
-2. OFF-102 - Add the automation contract artifact
-- Priority: P1 | Phase: contract | Status: active
-- Owner files: 0.dev-matrix/SPEC.json, 0.dev-matrix/LAUNCH_CHECKLIST.md, README.md, Shared-scripts
-- Why: The repo-local launch focus was still TBD and there is no accepted contract artifact for the first reusable automation bundle.
-- Done when: The repo has an accepted contract artifact and the launch surfaces all point at the same first automation bundle.
-- Validate: powershell -ExecutionPolicy Bypass -File ./0.dev-matrix/launch-check.ps1 ; powershell -ExecutionPolicy Bypass -File ./0.dev-matrix/sync-two-task-loop.ps1 -Mode manual
-- Business value: Makes the automation repo easier to sell, reuse, and validate.
-
-## Next 2 Queued Tasks
-
-1. OFF-103 - Validate the first reusable automation slice
-- Priority: P1 | Phase: realize | Status: ready
-- Waiting on: OFF-101, OFF-102
-- Owner files: 0.dev-matrix/TASK.md, 0.dev-matrix/STATE.md, 0.dev-matrix/AI-HANDOFF.md
-- Why: The next meaningful move is one explicit automation proof slice, not more generic repo setup.
-- Done when: One automation bundle lands with truthful validation and updated repo evidence.
-- Validate: powershell -ExecutionPolicy Bypass -File ./0.dev-matrix/launch-check.ps1 ; powershell -ExecutionPolicy Bypass -File ./0.dev-matrix/repo-layout-index.ps1
-- Business value: Moves the repo toward a reusable business automation asset.
-
-2. OFF-104 - Capture normalized Office automation evidence
-- Priority: P1 | Phase: prove | Status: planned
+1. OFF-104 - Capture normalized Office automation evidence
+- Priority: P1 | Phase: prove | Status: active
 - Waiting on: OFF-103
 - Owner files: 0.dev-matrix/AI-HANDOFF.md, 0.dev-matrix/STATE.md, 0.dev-matrix/TASK.md, 0.dev-matrix/LAST-CLOSEOUT.md
 - Why: The repo should finish the first automation slice with aligned proof and handoff continuity.
 - Done when: Handoff, state, task board, and closeout all reflect the same validated automation evidence.
 - Validate: powershell -ExecutionPolicy Bypass -File ./0.dev-matrix/launch-check.ps1 ; powershell -ExecutionPolicy Bypass -File ./0.dev-matrix/sync-two-task-loop.ps1 -Mode manual
 - Business value: Locks the repo's first reusable automation bundle into durable evidence future sessions can resume from.
+
+## Next 2 Queued Tasks
+
+- none
 
 ## Explicitly Blocked Tasks
 

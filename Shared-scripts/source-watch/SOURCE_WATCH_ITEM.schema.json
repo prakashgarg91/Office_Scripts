@@ -1,0 +1,102 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.local/shared-scripts/source-watch/source-watch-item.schema.json",
+  "title": "SourceWatchItem",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "item_id",
+    "source_id",
+    "source_kind",
+    "source_label",
+    "source_url",
+    "canonical_url",
+    "title",
+    "detected_at",
+    "content_hash",
+    "dedupe_key",
+    "metadata"
+  ],
+  "properties": {
+    "item_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "endpoint_id": {
+      "type": ["string", "null"]
+    },
+    "provider_item_id": {
+      "type": ["string", "null"]
+    },
+    "source_kind": {
+      "type": "string",
+      "enum": ["website", "rss", "api", "forum", "manual_import", "social", "unknown"]
+    },
+    "source_label": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_platform": {
+      "type": ["string", "null"]
+    },
+    "source_query": {
+      "type": ["string", "null"]
+    },
+    "source_url": {
+      "type": "string",
+      "minLength": 1
+    },
+    "canonical_url": {
+      "type": "string",
+      "minLength": 1
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "summary": {
+      "type": ["string", "null"]
+    },
+    "content_text": {
+      "type": ["string", "null"]
+    },
+    "author": {
+      "type": ["string", "null"]
+    },
+    "community_label": {
+      "type": ["string", "null"]
+    },
+    "published_at": {
+      "type": ["string", "null"],
+      "format": "date-time"
+    },
+    "detected_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "content_hash": {
+      "type": "string",
+      "minLength": 1
+    },
+    "dedupe_key": {
+      "type": "string",
+      "minLength": 1
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": []
+    },
+    "metadata": {
+      "type": "object",
+      "default": {},
+      "additionalProperties": true
+    }
+  }
+}

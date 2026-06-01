@@ -90,7 +90,7 @@
       "source_file": "0.dev-matrix\\graphify.ps1",
       "source_location": "L1",
       "id": "0_dev_matrix_graphify_ps1",
-      "community": 1,
+      "community": 2,
       "norm_label": "graphify.ps1"
     },
     {
@@ -99,7 +99,7 @@
       "source_file": "0.dev-matrix\\graphify.ps1",
       "source_location": "L31",
       "id": "graphify_require_python",
-      "community": 1,
+      "community": 2,
       "norm_label": "require-python()"
     },
     {
@@ -108,7 +108,7 @@
       "source_file": "0.dev-matrix\\graphify.ps1",
       "source_location": "L37",
       "id": "graphify_require_graph",
-      "community": 1,
+      "community": 2,
       "norm_label": "require-graph()"
     },
     {
@@ -117,7 +117,7 @@
       "source_file": "0.dev-matrix\\graphify.ps1",
       "source_location": "L43",
       "id": "graphify_invoke_graphify",
-      "community": 1,
+      "community": 2,
       "norm_label": "invoke-graphify()"
     },
     {
@@ -126,7 +126,7 @@
       "source_file": "0.dev-matrix\\graphify.ps1",
       "source_location": "L55",
       "id": "graphify_invoke_graphifywiki",
-      "community": 1,
+      "community": 2,
       "norm_label": "invoke-graphifywiki()"
     },
     {
@@ -135,7 +135,7 @@
       "source_file": "0.dev-matrix\\graphify.ps1",
       "source_location": "L93",
       "id": "graphify_invoke_graphifyhtml",
-      "community": 1,
+      "community": 2,
       "norm_label": "invoke-graphifyhtml()"
     },
     {
@@ -144,7 +144,7 @@
       "source_file": "0.dev-matrix\\graphify.ps1",
       "source_location": "L120",
       "id": "graphify_get_sectionbullets",
-      "community": 1,
+      "community": 2,
       "norm_label": "get-sectionbullets()"
     },
     {
@@ -153,7 +153,7 @@
       "source_file": "0.dev-matrix\\openharness.ps1",
       "source_location": "L1",
       "id": "0_dev_matrix_openharness_ps1",
-      "community": 3,
+      "community": 6,
       "norm_label": "openharness.ps1"
     },
     {
@@ -162,7 +162,7 @@
       "source_file": "0.dev-matrix\\pause-work.ps1",
       "source_location": "L1",
       "id": "0_dev_matrix_pause_work_ps1",
-      "community": 2,
+      "community": 5,
       "norm_label": "pause-work.ps1"
     },
     {
@@ -171,7 +171,7 @@
       "source_file": "0.dev-matrix\\pause-work.ps1",
       "source_location": "L7",
       "id": "pause_work_get_handofffieldvalue",
-      "community": 2,
+      "community": 5,
       "norm_label": "get-handofffieldvalue()"
     },
     {
@@ -180,7 +180,7 @@
       "source_file": "0.dev-matrix\\pause-work.ps1",
       "source_location": "L17",
       "id": "pause_work_get_latesthandoffentry",
-      "community": 2,
+      "community": 5,
       "norm_label": "get-latesthandoffentry()"
     },
     {
@@ -189,8 +189,17 @@
       "source_file": "0.dev-matrix\\project-progress.ps1",
       "source_location": "L1",
       "id": "0_dev_matrix_project_progress_ps1",
-      "community": 4,
+      "community": 7,
       "norm_label": "project-progress.ps1"
+    },
+    {
+      "label": "repo-layout-index.ps1",
+      "file_type": "code",
+      "source_file": "0.dev-matrix\\repo-layout-index.ps1",
+      "source_location": "L1",
+      "id": "0_dev_matrix_repo_layout_index_ps1",
+      "community": 8,
+      "norm_label": "repo-layout-index.ps1"
     },
     {
       "label": "resume-work.ps1",
@@ -198,8 +207,17 @@
       "source_file": "0.dev-matrix\\resume-work.ps1",
       "source_location": "L1",
       "id": "0_dev_matrix_resume_work_ps1",
-      "community": 5,
+      "community": 9,
       "norm_label": "resume-work.ps1"
+    },
+    {
+      "label": "runtime-error-loop.ps1",
+      "file_type": "code",
+      "source_file": "0.dev-matrix\\runtime-error-loop.ps1",
+      "source_location": "L1",
+      "id": "0_dev_matrix_runtime_error_loop_ps1",
+      "community": 10,
+      "norm_label": "runtime-error-loop.ps1"
     },
     {
       "label": "session-start-maintenance.ps1",
@@ -207,8 +225,197 @@
       "source_file": "0.dev-matrix\\session-start-maintenance.ps1",
       "source_location": "L1",
       "id": "0_dev_matrix_session_start_maintenance_ps1",
-      "community": 6,
+      "community": 11,
       "norm_label": "session-start-maintenance.ps1"
+    },
+    {
+      "label": "sync-two-task-loop.ps1",
+      "file_type": "code",
+      "source_file": "0.dev-matrix\\sync-two-task-loop.ps1",
+      "source_location": "L1",
+      "id": "0_dev_matrix_sync_two_task_loop_ps1",
+      "community": 12,
+      "norm_label": "sync-two-task-loop.ps1"
+    },
+    {
+      "label": "openrouter-free-model-fallbacks.ts",
+      "file_type": "code",
+      "source_file": "Shared-scripts\\openrouter-free-model-fallbacks.ts",
+      "source_location": "L1",
+      "id": "shared_scripts_openrouter_free_model_fallbacks_ts",
+      "community": 1,
+      "norm_label": "openrouter-free-model-fallbacks.ts"
+    },
+    {
+      "label": "isOpenRouterFreeTextModel()",
+      "file_type": "code",
+      "source_file": "Shared-scripts\\openrouter-free-model-fallbacks.ts",
+      "source_location": "L43",
+      "id": "openrouter_free_model_fallbacks_isopenrouterfreetextmodel",
+      "community": 1,
+      "norm_label": "isopenrouterfreetextmodel()"
+    },
+    {
+      "label": "getOpenRouterModelAliases()",
+      "file_type": "code",
+      "source_file": "Shared-scripts\\openrouter-free-model-fallbacks.ts",
+      "source_location": "L71",
+      "id": "openrouter_free_model_fallbacks_getopenroutermodelaliases",
+      "community": 1,
+      "norm_label": "getopenroutermodelaliases()"
+    },
+    {
+      "label": "matchOpenRouterRankedModelId()",
+      "file_type": "code",
+      "source_file": "Shared-scripts\\openrouter-free-model-fallbacks.ts",
+      "source_location": "L87",
+      "id": "openrouter_free_model_fallbacks_matchopenrouterrankedmodelid",
+      "community": 1,
+      "norm_label": "matchopenrouterrankedmodelid()"
+    },
+    {
+      "label": "parseOpenRouterWeeklyLeaderboard()",
+      "file_type": "code",
+      "source_file": "Shared-scripts\\openrouter-free-model-fallbacks.ts",
+      "source_location": "L100",
+      "id": "openrouter_free_model_fallbacks_parseopenrouterweeklyleaderboard",
+      "community": 1,
+      "norm_label": "parseopenrouterweeklyleaderboard()"
+    },
+    {
+      "label": "parseOpenRouterRankingHistory()",
+      "file_type": "code",
+      "source_file": "Shared-scripts\\openrouter-free-model-fallbacks.ts",
+      "source_location": "L113",
+      "id": "openrouter_free_model_fallbacks_parseopenrouterrankinghistory",
+      "community": 1,
+      "norm_label": "parseopenrouterrankinghistory()"
+    },
+    {
+      "label": "getMostPopularOpenRouterFreeModel()",
+      "file_type": "code",
+      "source_file": "Shared-scripts\\openrouter-free-model-fallbacks.ts",
+      "source_location": "L130",
+      "id": "openrouter_free_model_fallbacks_getmostpopularopenrouterfreemodel",
+      "community": 1,
+      "norm_label": "getmostpopularopenrouterfreemodel()"
+    },
+    {
+      "label": "buildOpenRouterPopularityFallbacks()",
+      "file_type": "code",
+      "source_file": "Shared-scripts\\openrouter-free-model-fallbacks.ts",
+      "source_location": "L154",
+      "id": "openrouter_free_model_fallbacks_buildopenrouterpopularityfallbacks",
+      "community": 1,
+      "norm_label": "buildopenrouterpopularityfallbacks()"
+    },
+    {
+      "label": "ask-github-model.mjs",
+      "file_type": "code",
+      "source_file": "Shared-scripts\\github-copilot-bridge\\ask-github-model.mjs",
+      "source_location": "L1",
+      "id": "shared_scripts_github_copilot_bridge_ask_github_model_mjs",
+      "community": 4,
+      "norm_label": "ask-github-model.mjs"
+    },
+    {
+      "label": "parseArgs()",
+      "file_type": "code",
+      "source_file": "Shared-scripts\\github-copilot-bridge\\ask-github-model.mjs",
+      "source_location": "L6",
+      "id": "ask_github_model_parseargs",
+      "community": 4,
+      "norm_label": "parseargs()"
+    },
+    {
+      "label": "printUsage()",
+      "file_type": "code",
+      "source_file": "Shared-scripts\\github-copilot-bridge\\ask-github-model.mjs",
+      "source_location": "L76",
+      "id": "ask_github_model_printusage",
+      "community": 4,
+      "norm_label": "printusage()"
+    },
+    {
+      "label": "readStdin()",
+      "file_type": "code",
+      "source_file": "Shared-scripts\\github-copilot-bridge\\ask-github-model.mjs",
+      "source_location": "L95",
+      "id": "ask_github_model_readstdin",
+      "community": 4,
+      "norm_label": "readstdin()"
+    },
+    {
+      "label": "callBridge()",
+      "file_type": "code",
+      "source_file": "Shared-scripts\\github-copilot-bridge\\ask-github-model.mjs",
+      "source_location": "L108",
+      "id": "ask_github_model_callbridge",
+      "community": 4,
+      "norm_label": "callbridge()"
+    },
+    {
+      "label": "extension.js",
+      "file_type": "code",
+      "source_file": "Shared-scripts\\github-copilot-bridge\\vscode-copilot-bridge\\extension.js",
+      "source_location": "L1",
+      "id": "shared_scripts_github_copilot_bridge_vscode_copilot_bridge_extension_js",
+      "community": 3,
+      "norm_label": "extension.js"
+    },
+    {
+      "label": "log()",
+      "file_type": "code",
+      "source_file": "Shared-scripts\\github-copilot-bridge\\vscode-copilot-bridge\\extension.js",
+      "source_location": "L27",
+      "id": "extension_log",
+      "community": 3,
+      "norm_label": "log()"
+    },
+    {
+      "label": "getBridgeSettings()",
+      "file_type": "code",
+      "source_file": "Shared-scripts\\github-copilot-bridge\\vscode-copilot-bridge\\extension.js",
+      "source_location": "L34",
+      "id": "extension_getbridgesettings",
+      "community": 3,
+      "norm_label": "getbridgesettings()"
+    },
+    {
+      "label": "callCopilot()",
+      "file_type": "code",
+      "source_file": "Shared-scripts\\github-copilot-bridge\\vscode-copilot-bridge\\extension.js",
+      "source_location": "L50",
+      "id": "extension_callcopilot",
+      "community": 3,
+      "norm_label": "callcopilot()"
+    },
+    {
+      "label": "createRequestHandler()",
+      "file_type": "code",
+      "source_file": "Shared-scripts\\github-copilot-bridge\\vscode-copilot-bridge\\extension.js",
+      "source_location": "L97",
+      "id": "extension_createrequesthandler",
+      "community": 3,
+      "norm_label": "createrequesthandler()"
+    },
+    {
+      "label": "activate()",
+      "file_type": "code",
+      "source_file": "Shared-scripts\\github-copilot-bridge\\vscode-copilot-bridge\\extension.js",
+      "source_location": "L150",
+      "id": "extension_activate",
+      "community": 3,
+      "norm_label": "activate()"
+    },
+    {
+      "label": "deactivate()",
+      "file_type": "code",
+      "source_file": "Shared-scripts\\github-copilot-bridge\\vscode-copilot-bridge\\extension.js",
+      "source_location": "L183",
+      "id": "extension_deactivate",
+      "community": 3,
+      "norm_label": "deactivate()"
     }
   ],
   "links": [
@@ -486,6 +693,354 @@
       "_tgt": "pause_work_get_latesthandoffentry",
       "source": "0_dev_matrix_pause_work_ps1",
       "target": "pause_work_get_latesthandoffentry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Shared-scripts\\openrouter-free-model-fallbacks.ts",
+      "source_location": "L43",
+      "weight": 1.0,
+      "_src": "shared_scripts_openrouter_free_model_fallbacks_ts",
+      "_tgt": "openrouter_free_model_fallbacks_isopenrouterfreetextmodel",
+      "source": "shared_scripts_openrouter_free_model_fallbacks_ts",
+      "target": "openrouter_free_model_fallbacks_isopenrouterfreetextmodel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Shared-scripts\\openrouter-free-model-fallbacks.ts",
+      "source_location": "L71",
+      "weight": 1.0,
+      "_src": "shared_scripts_openrouter_free_model_fallbacks_ts",
+      "_tgt": "openrouter_free_model_fallbacks_getopenroutermodelaliases",
+      "source": "shared_scripts_openrouter_free_model_fallbacks_ts",
+      "target": "openrouter_free_model_fallbacks_getopenroutermodelaliases",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Shared-scripts\\openrouter-free-model-fallbacks.ts",
+      "source_location": "L87",
+      "weight": 1.0,
+      "_src": "shared_scripts_openrouter_free_model_fallbacks_ts",
+      "_tgt": "openrouter_free_model_fallbacks_matchopenrouterrankedmodelid",
+      "source": "shared_scripts_openrouter_free_model_fallbacks_ts",
+      "target": "openrouter_free_model_fallbacks_matchopenrouterrankedmodelid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Shared-scripts\\openrouter-free-model-fallbacks.ts",
+      "source_location": "L100",
+      "weight": 1.0,
+      "_src": "shared_scripts_openrouter_free_model_fallbacks_ts",
+      "_tgt": "openrouter_free_model_fallbacks_parseopenrouterweeklyleaderboard",
+      "source": "shared_scripts_openrouter_free_model_fallbacks_ts",
+      "target": "openrouter_free_model_fallbacks_parseopenrouterweeklyleaderboard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Shared-scripts\\openrouter-free-model-fallbacks.ts",
+      "source_location": "L113",
+      "weight": 1.0,
+      "_src": "shared_scripts_openrouter_free_model_fallbacks_ts",
+      "_tgt": "openrouter_free_model_fallbacks_parseopenrouterrankinghistory",
+      "source": "shared_scripts_openrouter_free_model_fallbacks_ts",
+      "target": "openrouter_free_model_fallbacks_parseopenrouterrankinghistory",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Shared-scripts\\openrouter-free-model-fallbacks.ts",
+      "source_location": "L130",
+      "weight": 1.0,
+      "_src": "shared_scripts_openrouter_free_model_fallbacks_ts",
+      "_tgt": "openrouter_free_model_fallbacks_getmostpopularopenrouterfreemodel",
+      "source": "shared_scripts_openrouter_free_model_fallbacks_ts",
+      "target": "openrouter_free_model_fallbacks_getmostpopularopenrouterfreemodel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Shared-scripts\\openrouter-free-model-fallbacks.ts",
+      "source_location": "L154",
+      "weight": 1.0,
+      "_src": "shared_scripts_openrouter_free_model_fallbacks_ts",
+      "_tgt": "openrouter_free_model_fallbacks_buildopenrouterpopularityfallbacks",
+      "source": "shared_scripts_openrouter_free_model_fallbacks_ts",
+      "target": "openrouter_free_model_fallbacks_buildopenrouterpopularityfallbacks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "Shared-scripts\\openrouter-free-model-fallbacks.ts",
+      "source_location": "L138",
+      "weight": 1.0,
+      "_src": "openrouter_free_model_fallbacks_getmostpopularopenrouterfreemodel",
+      "_tgt": "openrouter_free_model_fallbacks_matchopenrouterrankedmodelid",
+      "source": "openrouter_free_model_fallbacks_matchopenrouterrankedmodelid",
+      "target": "openrouter_free_model_fallbacks_getmostpopularopenrouterfreemodel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "Shared-scripts\\openrouter-free-model-fallbacks.ts",
+      "source_location": "L166",
+      "weight": 1.0,
+      "_src": "openrouter_free_model_fallbacks_buildopenrouterpopularityfallbacks",
+      "_tgt": "openrouter_free_model_fallbacks_matchopenrouterrankedmodelid",
+      "source": "openrouter_free_model_fallbacks_matchopenrouterrankedmodelid",
+      "target": "openrouter_free_model_fallbacks_buildopenrouterpopularityfallbacks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "Shared-scripts\\openrouter-free-model-fallbacks.ts",
+      "source_location": "L164",
+      "weight": 1.0,
+      "_src": "openrouter_free_model_fallbacks_buildopenrouterpopularityfallbacks",
+      "_tgt": "openrouter_free_model_fallbacks_parseopenrouterweeklyleaderboard",
+      "source": "openrouter_free_model_fallbacks_parseopenrouterweeklyleaderboard",
+      "target": "openrouter_free_model_fallbacks_buildopenrouterpopularityfallbacks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "Shared-scripts\\openrouter-free-model-fallbacks.ts",
+      "source_location": "L158",
+      "weight": 1.0,
+      "_src": "openrouter_free_model_fallbacks_buildopenrouterpopularityfallbacks",
+      "_tgt": "openrouter_free_model_fallbacks_parseopenrouterrankinghistory",
+      "source": "openrouter_free_model_fallbacks_parseopenrouterrankinghistory",
+      "target": "openrouter_free_model_fallbacks_buildopenrouterpopularityfallbacks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "Shared-scripts\\openrouter-free-model-fallbacks.ts",
+      "source_location": "L187",
+      "weight": 1.0,
+      "_src": "openrouter_free_model_fallbacks_buildopenrouterpopularityfallbacks",
+      "_tgt": "openrouter_free_model_fallbacks_getmostpopularopenrouterfreemodel",
+      "source": "openrouter_free_model_fallbacks_getmostpopularopenrouterfreemodel",
+      "target": "openrouter_free_model_fallbacks_buildopenrouterpopularityfallbacks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Shared-scripts\\github-copilot-bridge\\ask-github-model.mjs",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_src": "shared_scripts_github_copilot_bridge_ask_github_model_mjs",
+      "_tgt": "ask_github_model_parseargs",
+      "source": "shared_scripts_github_copilot_bridge_ask_github_model_mjs",
+      "target": "ask_github_model_parseargs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Shared-scripts\\github-copilot-bridge\\ask-github-model.mjs",
+      "source_location": "L76",
+      "weight": 1.0,
+      "_src": "shared_scripts_github_copilot_bridge_ask_github_model_mjs",
+      "_tgt": "ask_github_model_printusage",
+      "source": "shared_scripts_github_copilot_bridge_ask_github_model_mjs",
+      "target": "ask_github_model_printusage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Shared-scripts\\github-copilot-bridge\\ask-github-model.mjs",
+      "source_location": "L95",
+      "weight": 1.0,
+      "_src": "shared_scripts_github_copilot_bridge_ask_github_model_mjs",
+      "_tgt": "ask_github_model_readstdin",
+      "source": "shared_scripts_github_copilot_bridge_ask_github_model_mjs",
+      "target": "ask_github_model_readstdin",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Shared-scripts\\github-copilot-bridge\\ask-github-model.mjs",
+      "source_location": "L108",
+      "weight": 1.0,
+      "_src": "shared_scripts_github_copilot_bridge_ask_github_model_mjs",
+      "_tgt": "ask_github_model_callbridge",
+      "source": "shared_scripts_github_copilot_bridge_ask_github_model_mjs",
+      "target": "ask_github_model_callbridge",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "Shared-scripts\\github-copilot-bridge\\ask-github-model.mjs",
+      "source_location": "L68",
+      "weight": 1.0,
+      "_src": "ask_github_model_parseargs",
+      "_tgt": "ask_github_model_printusage",
+      "source": "ask_github_model_parseargs",
+      "target": "ask_github_model_printusage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "Shared-scripts\\github-copilot-bridge\\ask-github-model.mjs",
+      "source_location": "L77",
+      "weight": 1.0,
+      "_src": "ask_github_model_printusage",
+      "_tgt": "extension_log",
+      "source": "ask_github_model_printusage",
+      "target": "extension_log"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "Shared-scripts\\github-copilot-bridge\\ask-github-model.mjs",
+      "source_location": "L118",
+      "weight": 1.0,
+      "_src": "ask_github_model_callbridge",
+      "_tgt": "ask_github_model_readstdin",
+      "source": "ask_github_model_readstdin",
+      "target": "ask_github_model_callbridge",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "Shared-scripts\\github-copilot-bridge\\ask-github-model.mjs",
+      "source_location": "L114",
+      "weight": 1.0,
+      "_src": "ask_github_model_callbridge",
+      "_tgt": "extension_log",
+      "source": "ask_github_model_callbridge",
+      "target": "extension_log"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Shared-scripts\\github-copilot-bridge\\vscode-copilot-bridge\\extension.js",
+      "source_location": "L27",
+      "weight": 1.0,
+      "_src": "shared_scripts_github_copilot_bridge_vscode_copilot_bridge_extension_js",
+      "_tgt": "extension_log",
+      "source": "shared_scripts_github_copilot_bridge_vscode_copilot_bridge_extension_js",
+      "target": "extension_log",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Shared-scripts\\github-copilot-bridge\\vscode-copilot-bridge\\extension.js",
+      "source_location": "L34",
+      "weight": 1.0,
+      "_src": "shared_scripts_github_copilot_bridge_vscode_copilot_bridge_extension_js",
+      "_tgt": "extension_getbridgesettings",
+      "source": "shared_scripts_github_copilot_bridge_vscode_copilot_bridge_extension_js",
+      "target": "extension_getbridgesettings",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Shared-scripts\\github-copilot-bridge\\vscode-copilot-bridge\\extension.js",
+      "source_location": "L50",
+      "weight": 1.0,
+      "_src": "shared_scripts_github_copilot_bridge_vscode_copilot_bridge_extension_js",
+      "_tgt": "extension_callcopilot",
+      "source": "shared_scripts_github_copilot_bridge_vscode_copilot_bridge_extension_js",
+      "target": "extension_callcopilot",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Shared-scripts\\github-copilot-bridge\\vscode-copilot-bridge\\extension.js",
+      "source_location": "L97",
+      "weight": 1.0,
+      "_src": "shared_scripts_github_copilot_bridge_vscode_copilot_bridge_extension_js",
+      "_tgt": "extension_createrequesthandler",
+      "source": "shared_scripts_github_copilot_bridge_vscode_copilot_bridge_extension_js",
+      "target": "extension_createrequesthandler",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Shared-scripts\\github-copilot-bridge\\vscode-copilot-bridge\\extension.js",
+      "source_location": "L150",
+      "weight": 1.0,
+      "_src": "shared_scripts_github_copilot_bridge_vscode_copilot_bridge_extension_js",
+      "_tgt": "extension_activate",
+      "source": "shared_scripts_github_copilot_bridge_vscode_copilot_bridge_extension_js",
+      "target": "extension_activate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "Shared-scripts\\github-copilot-bridge\\vscode-copilot-bridge\\extension.js",
+      "source_location": "L183",
+      "weight": 1.0,
+      "_src": "shared_scripts_github_copilot_bridge_vscode_copilot_bridge_extension_js",
+      "_tgt": "extension_deactivate",
+      "source": "shared_scripts_github_copilot_bridge_vscode_copilot_bridge_extension_js",
+      "target": "extension_deactivate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "Shared-scripts\\github-copilot-bridge\\vscode-copilot-bridge\\extension.js",
+      "source_location": "L56",
+      "weight": 1.0,
+      "_src": "extension_callcopilot",
+      "_tgt": "extension_log",
+      "source": "extension_log",
+      "target": "extension_callcopilot",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "Shared-scripts\\github-copilot-bridge\\vscode-copilot-bridge\\extension.js",
+      "source_location": "L153",
+      "weight": 1.0,
+      "_src": "extension_activate",
+      "_tgt": "extension_getbridgesettings",
+      "source": "extension_getbridgesettings",
+      "target": "extension_activate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "Shared-scripts\\github-copilot-bridge\\vscode-copilot-bridge\\extension.js",
+      "source_location": "L155",
+      "weight": 1.0,
+      "_src": "extension_activate",
+      "_tgt": "extension_createrequesthandler",
+      "source": "extension_createrequesthandler",
+      "target": "extension_activate",
       "confidence_score": 1.0
     }
   ],

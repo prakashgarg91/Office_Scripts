@@ -10,18 +10,19 @@
 
 | ID | Task | Type | Owner | Status |
 |----|------|------|-------|--------|
-| OFF-101 | Define the first shippable automation bundle | Scope | CANONICAL QUEUE | 🟡 Active |
-| OFF-102 | Add the automation contract artifact | Contract | CANONICAL QUEUE | 🟡 Active |
+| OFF-104 | Capture normalized Office automation evidence | Proof | CANONICAL QUEUE | 🟡 Active |
 
 ## NEXT TASKS
 
 | ID | Task | Type | Owner | Status |
 |----|------|------|-------|--------|
-| OFF-103 | Validate the first reusable automation slice | Validation | CANONICAL QUEUE | 🟢 Ready |
-| OFF-104 | Capture normalized Office automation evidence | Proof | CANONICAL QUEUE | ⚪ Planned |
+| — | — | — | — | — |
 
 ## COMPLETED TASKS
 
 | ID | Task | Completed | Evidence |
 |----|------|-----------|---------|
+| OFF-103 | Validate the first reusable automation slice — ExcelReportPipeline core landed | 2026-05-31 | src/bundles/excel-report-pipeline/ created: VBA orchestrator, Power Query M, sample data, validation script. Validate.ps1: 29/29 passes, 0 failures |
+| OFF-102 | Add the automation contract artifact — SPEC.json accepted for ExcelReportPipeline | 2026-05-31 | 0.dev-matrix/SPEC.json created, valid JSON, sync-two-task-loop.ps1 confirms queue normalized |
+| OFF-101 | Define the first shippable automation bundle — ExcelReportPipeline named | 2026-05-31 | README.md, LAUNCH_CHECKLIST.md, TASK.md all aligned to ExcelReportPipeline |
 | OFF-001 | Repo classified in the cross-repo portfolio as low-priority Office automation work | 2026-05-10 | 0.dev-matrix portfolio closeout and repo registry |

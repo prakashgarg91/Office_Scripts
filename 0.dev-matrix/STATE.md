@@ -2,12 +2,15 @@
 
 ## Critical Alerts
 
-- No hard blocker is recorded yet beyond truth-sync work. Canonical queue: `OFF-101` and `OFF-102` active, `OFF-103` ready, `OFF-104` planned.
+- No hard blocker. OFF-101, OFF-102, and OFF-103 complete. OFF-104 is the sole active task (capture normalized Office automation evidence).
 
 ## Current Focus
 
-- Active pair: `OFF-101` define the first shippable automation bundle and `OFF-102` add the automation contract artifact.
+- Active task: `OFF-104` — capture normalized Office automation evidence.
+- Completed this session: `OFF-103` — validated first reusable automation slice for ExcelReportPipeline. Bundle landed at `src/bundles/excel-report-pipeline/` (VBA orchestrator, Power Query M script, sample data, validation script). Validation: 29/29 passes, 0 failures.
 
 ## Notes
 
-- `0.dev-matrix/AI-TASKS.json` is the canonical queue. Use `0.dev-matrix/launch-check.ps1`, `0.dev-matrix/repo-layout-index.ps1`, and `0.dev-matrix/sync-two-task-loop.ps1` as the current proof surfaces.
+- The first bundle `ExcelReportPipeline` covers the common office pattern: data import → Power Query transform → VBA orchestration → formatted report → distribution.
+- Bundle landing zone: `src/bundles/excel-report-pipeline/`.
+- `0.dev-matrix/AI-TASKS.json` is the canonical queue.

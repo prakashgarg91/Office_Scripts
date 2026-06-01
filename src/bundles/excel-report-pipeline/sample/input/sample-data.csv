@@ -1,0 +1,13 @@
+Date,Category,Item,Quantity,UnitPrice,Total
+2026-01-15,Electronics,Laptop,5,999.99,4999.95
+2026-01-15,Electronics,Monitor,10,249.50,2495.00
+2026-01-16,Office Supplies,Paper (ream),50,5.49,274.50
+2026-01-16,Office Supplies,Pens (box),30,12.99,389.70
+2026-01-17,Furniture,Desk Chair,8,189.00,1512.00
+2026-01-17,Furniture,Standing Desk,3,549.00,1647.00
+2026-01-18,Electronics,USB-C Hub,25,34.99,874.75
+2026-01-18,Electronics,Keyboard,15,79.99,1199.85
+2026-01-19,Office Supplies,Notebooks,40,3.99,159.60
+2026-01-19,Office Supplies,Stapler,20,15.49,309.80
+2026-01-20,Furniture,Bookshelf,5,129.00,645.00
+2026-01-20,Electronics,Webcam,12,59.99,719.88

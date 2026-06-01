@@ -29,6 +29,30 @@ Update protocol:
 
 ## Handoff Log
 
+### 2026-05-31 — OFF-103 done: first reusable automation slice validated
+- Changed: landed the first reusable automation slice in `src/bundles/excel-report-pipeline/`. Created VBA orchestrator module (`vba/orchestrator.bas` — 7 functions: RunPipeline, PreFlightCheck, ImportSource, PostProcess, SaveOutput, PostFlightCheck, DistributeOutput, LogEvent), Power Query M transform script (`power-query/load-and-transform.m` — 5-step pipeline), 12-row sample CSV, standalone PowerShell validator (`validate.ps1`), and bundle README. Reconciled AI-TASKS.json to mark OFF-103 done and promote OFF-104 to active. Updated STATE.md, TASK.md, LAUNCH_CHECKLIST.md.
+- Verified: `validate.ps1 -SkipComTest` passes 29/29 assertions (file existence, VBA structure, Power Query M steps, CSV integrity, SPEC.json contract alignment), 0 failures, 2 expected warnings (no Auto_Open on library module, COM test skipped due to no Excel in this environment). `sync-two-task-loop.ps1 -Mode manual` confirms OFF-103 done, OFF-104 active.
+- Operational proof: `powershell -ExecutionPolicy Bypass -File .\src\bundles\excel-report-pipeline\validate.ps1 -SkipComTest` returns exit 0 with 29 passes, 0 fails. `powershell -ExecutionPolicy Bypass -File .\0.dev-matrix\sync-two-task-loop.ps1 -Mode manual` confirms OFF-104 is sole active task.
+- Continue from: OFF-104 is the sole active task — capture normalized Office automation evidence.
+- Next step: publish validation evidence (validation report, snapshot of repo state) so the first bundle's truth is locked into durable evidence future sessions can resume from.
+- Blockers: none.
+
+### 2026-05-31 — OFF-102 done: automation contract artifact accepted
+- Changed: accepted `0.dev-matrix/SPEC.json` as the ExcelReportPipeline contract artifact. Reconciled AI-TASKS.json (canonical queue) to mark OFF-102 done and promote OFF-103 to active. Updated LAUNCH_CHECKLIST.md to reflect contract acceptance.
+- Verified: SPEC.json valid JSON with 8 contract sections (inputs, transforms, outputs, distribution, validation, dependencies, errorHandling, extensionRules). AI-TASKS.json and sync-two-task-loop.ps1 now agree OFF-102 is done.
+- Operational proof: `powershell -ExecutionPolicy Bypass -File .\0.dev-matrix\sync-two-task-loop.ps1 -Mode manual` confirms OFF-103 active, OFF-104 next.
+- Continue from: OFF-103 is the sole active task — validate the first reusable automation slice for ExcelReportPipeline.
+- Next step: land one runnable slice in `src/bundles/excel-report-pipeline/` with truthful validation.
+- Blockers: none.
+
+### 2026-05-31 — OFF-101 complete: first shippable automation bundle named
+- Changed: named **ExcelReportPipeline** as the first shippable automation bundle. Updated README.md with bundle spec (import → transform → report → distribute). Updated LAUNCH_CHECKLIST.md current launch slice. Moved OFF-101 to completed in TASK.md.
+- Verified: all four owner files (README.md, LAUNCH_CHECKLIST.md, TASK.md, AI-HANDOFF.md) aligned to ExcelReportPipeline as the canonical first bundle.
+- Operational proof: `powershell -ExecutionPolicy Bypass -File .\0.dev-matrix\sync-two-task-loop.ps1 -Mode manual` confirms OFF-101 moved to done, OFF-102 is the sole active task.
+- Continue from: OFF-102 is the next active task — add the automation contract artifact (SPEC.json) for ExcelReportPipeline.
+- Next step: create `0.dev-matrix/SPEC.json` defining the ExcelReportPipeline bundle contract: inputs, transforms, outputs, validation, and distribution surface.
+- Blockers: none.
+
 ### 2026-05-14 — shared-scripts intake boundary codified
 
 - Changed: audited `D:\Github\Office_Scripts\Shared-scripts\` for reusable repo-operations assets and updated `0.dev-matrix/WATCH.md` with an explicit intake rule so future sessions do not re-audit unrelated shared design skills or non-operational helpers.

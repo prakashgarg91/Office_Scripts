@@ -1,0 +1,189 @@
+{
+  "$schema": "Office Automation Bundle Contract v1.0",
+  "bundle": {
+    "name": "ExcelReportPipeline",
+    "version": "0.1.0",
+    "status": "contract-accepted",
+    "repo": "Office_Scripts",
+    "author": "office-scripts",
+    "purpose": "Automate recurring business-report production:  raw data import → Power Query transform → VBA orchestration → formatted Excel report → email/SharePoint distribution."
+  },
+  "canonicalEntity": "ExcelReportPipeline",
+  "contract": {
+    "inputs": {
+      "description": "Raw data feeds accepted by the pipeline. Each source must be resolvable at runtime without manual browse-to-file steps.",
+      "acceptedSources": [
+        {
+          "kind": "csv",
+          "pathPattern": "data/input/*.csv",
+          "encoding": "UTF-8",
+          "delimiter": "comma",
+          "headers": true
+        },
+        {
+          "kind": "excelWorkbook",
+          "pathPattern": "data/input/*.xlsx",
+          "worksheet": "first-or-named",
+          "headers": true
+        },
+        {
+          "kind": "database",
+          "provider": "OLEDB or ODBC",
+          "connection": "environment-variable or config-file",
+          "query": "SELECT-driven, read-only"
+        }
+      ],
+      "requiredFields": {
+        "minimumRowCount": 1,
+        "enforcedColumns": "declared in transform step, not here"
+      },
+      "rejectionRules": {
+        "emptyFile": "halt with input-error log entry",
+        "missingColumn": "halt with column-error log entry if column is required by a transform",
+        "invalidEncoding": "halt with encoding-error log entry"
+      }
+    },
+    "transforms": {
+      "description": "Power Query M scripts for data cleaning and shaping, plus VBA orchestration for workbook-level control.",
+      "powerQuery": {
+        "entryPoint": "power-query/load-and-transform.m",
+        "steps": [
+          "import from accepted source",
+          "remove-blanks",
+          "normalize-columns (trim, cast types)",
+          "merge-joins across sources when configured",
+          "calculated-columns per report spec"
+        ],
+        "parameterSurface": [
+          "sourcePath",
+          "worksheetName (for Excel sources)",
+          "delimiter (for CSV sources)",
+          "connectionString (for database sources)"
+        ]
+      },
+      "vbaOrchestration": {
+        "entryPoint": "vba/orchestrator.bas",
+        "steps": [
+          "resolve input source at runtime",
+          "invoke Power Query refresh with given parameters",
+          "post-processing: freeze panes, print area, named ranges",
+          "trigger output generation"
+        ],
+        "parameterSurface": [
+          "reportDate",
+          "outputFormat (xlsx, xlsm, pdf)",
+          "distributionTarget (email, sharepoint, local)"
+        ]
+      }
+    },
+    "outputs": {
+      "description": "Formatted Excel reports produced by the pipeline.",
+      "reportFormat": {
+        "fileNamePattern": "ExcelReportPipeline_{reportDate}_{bundleVersion}.xlsx",
+        "destinationPath": "data/output/",
+        "requiredSheets": ["Report", "Data"],
+        "visibility": "Report sheet visible; Data sheet may be hidden or very-hidden"
+      },
+      "reportSheetContents": {
+        "freezePanes": "top-left data cell",
+        "printArea": "full data range",
+        "namedRanges": ["ReportData", "ReportTitle", "ReportDate"]
+      },
+      "fileIntegrity": {
+        "minimumRowCount": 1,
+        "requiredColumns": "defined per report spec variant"
+      }
+    },
+    "distribution": {
+      "description": "Post-generation delivery surface for the finished report.",
+      "surfaces": [
+        {
+          "kind": "email",
+          "provider": "Outlook (MAPI/SMTP)",
+          "attachment": "output report file",
+          "subjectPattern": "ExcelReportPipeline Report {reportDate}",
+          "recipientSource": "config-file or named-range"
+        },
+        {
+          "kind": "sharePoint",
+          "provider": "SharePoint Online or SharePoint Server",
+          "uploadPath": "config-file or environment-variable",
+          "overwrite": "replace or archive-previous"
+        },
+        {
+          "kind": "local",
+          "provider": "filesystem",
+          "destination": "data/output/"
+        }
+      ],
+      "deliveryConfirmation": "log entry per distribution attempt with timestamp and outcome"
+    },
+    "validation": {
+      "description": "Automated checks that prove the pipeline produces a correct report.",
+      "preFlight": [
+        "source file exists and is readable",
+        "source file matches expected schema (column presence, not content)",
+        "output directory is writable"
+      ],
+      "postFlight": [
+        "output file exists",
+        "output file is not empty",
+        "output file contains at least one data row in the Report sheet",
+        "output file contains the named ranges: ReportTitle, ReportDate, ReportData",
+        "output file's ReportData row count matches or exceeds source row count (for non-aggregating reports)",
+        "no #REF!, #VALUE!, or #N/A errors on the Report sheet"
+      ],
+      "regression": [
+        "contract-versioned reference output for diff comparison",
+        "row-count stability check across runs with identical input"
+      ]
+    },
+    "dependencies": {
+      "office": {
+        "minimumVersion": "Office 2016 or Microsoft 365",
+        "requiredComponents": ["Excel", "Power Query (Get & Transform)"]
+      },
+      "external": {
+        "outlook": "required for email distribution surface only",
+        "sharePoint": "required for SharePoint distribution surface only",
+        "databaseDrivers": "OLEDB or ODBC driver required for database input source only"
+      },
+      "repoInternal": [
+        "vba/orchestrator.bas",
+        "power-query/load-and-transform.m"
+      ]
+    },
+    "errorHandling": {
+      "logLocation": "data/logs/ExcelReportPipeline_{reportDate}.log",
+      "haltConditions": [
+        "input source not found",
+        "input source empty",
+        "input source schema mismatch (columns required by transform are missing)",
+        "Power Query refresh fails",
+        "output file cannot be written"
+      ],
+      "warnConditions": [
+        "source has fewer rows than expected threshold",
+        "distribution surface unavailable (degrade gracefully)",
+        "named range creation fails (report still produced)"
+      ],
+      "rollback": "no destructive operations; previous output is never overwritten until new output passes postFlight validation"
+    },
+    "extensionRules": {
+      "description": "How future bundles extend or compose with ExcelReportPipeline.",
+      "rules": [
+        "new input sources may be added without breaking existing transforms",
+        "new output sheets may be appended without modifying the Report sheet contract",
+        "new distribution surfaces may be added without touching existing ones",
+        "transform steps may be appended after the last current step; reordering requires a contract version bump",
+        "consumers must not rename or reinterpret core contract fields",
+        "consumer-specific workflow state must remain in the consuming bundle"
+      ]
+    }
+  },
+  "acceptance": {
+    "acceptedBy": "OFF-102 task completion",
+    "date": "2026-05-31",
+    "nextTask": "OFF-104 — Capture normalized Office automation evidence for ExcelReportPipeline"
+  }
+}

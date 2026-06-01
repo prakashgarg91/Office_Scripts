@@ -1,0 +1,173 @@
+=== Session Start Maintenance ===
+Started: 2026-05-31T15:38:38
+Repo: D:\Github\Office_Scripts
+--- code-review-graph update --repo ---
+code-review-graph.exe : INFO: FTS index rebuilt: 19 rows indexed
+At D:\Github\0.dev-matrix\session-start-maintenance.shared.ps1:114 char:15
++     $output = & $commandPath @arguments 2>&1 | Out-String
++               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (INFO: FTS index rebuilt: 19 rows indexed:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Incremental: 31 files updated, 0 nodes, 0 edges (postprocess=full)
+--- roo-index smoke ---
+node.exe : 
+At D:\Github\0.dev-matrix\session-start-maintenance.shared.ps1:114 char:15
++     $output = & $commandPath @arguments 2>&1 | Out-String
++               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+
++-----------------------------------------------------------------------------+
+|                                                                             |
+|                                                                             |
+|                        \u2584\u2580\u2580 \u2584\u2580\u2588 \u2588\u2580\u2580 \u2580\u2588\u2580 
+\u2588\u2580\u2584\u2580\u2588 \u2588\u2580\u2580 \u2588\u2580\u2588                        |
+|                        \u2588\u2580  \u2588\u2580\u2588 \u2584\u2584\u2588  \u2588  \u2588 \u2580 \u2588 
+\u2588\u2584\u2584 \u2588\u2580\u2580                        |
+|                                                                             |
+|                                                                             |
+|                                                                             |
+|                                FastMCP 3.2.4                                |
+|                            https://gofastmcp.com                            |
+|                                                                             |
+|              \U0001f5a5  Server:      roo-code-index-bridge-mcp, 3.2.4               |
+|              \U0001f680 Deploy free: https://horizon.prefect.io                     |
+|                                                                             |
++-----------------------------------------------------------------------------+
++-----------------------------------------------------------------------------+
+|                         \U0001f389 Update available: 3.3.1                          |
+|                     Run: pip install --upgrade fastmcp                      |
++-----------------------------------------------------------------------------+
+
+
+[05/31/26 15:38:43] INFO     Starting MCP server               transport.py:209
+                             'roo-code-index-bridge-mcp' with                  
+                             transport 'stdio'                                 
+{
+  "workspace": "D:\\Github\\Office_Scripts",
+  "workspaceConfig": {
+    "configPath": "D:\\Github\\Office_Scripts\\.vscode\\mcp.json",
+    "serverName": "roo-code-index-bridge",
+    "rooConfig": {
+      "type": "stdio",
+      "command": "uv",
+      "args": [
+        "run",
+        "--directory",
+        "D:/Github/roo-code-index-bridge-mcp",
+        "roo-code-index-bridge-mcp"
+      ],
+      "env": {
+        "ROO_INDEX_BRIDGE_CONFIG_PATH": "C:/Users/Prakash/AppData/Roaming/Code/User/mcp-tools/roo_code_index_bridge_config.json"
+      }
+    },
+    "servers": [
+      "qdrant",
+      "code-review-graph",
+      "graphify",
+      "roo-code-index-bridge"
+    ]
+  },
+  "shared": {
+    "label": "shared",
+    "serverName": "roo-code-index-bridge",
+    "toolNames": [
+      "roo-code-index-health",
+      "roo-code-index-resolve-collection",
+      "roo-code-index-search"
+    ],
+    "toolSurface": "canonical",
+    "detect": {
+      "collectionName": "ws-c133cb7abb5fd663",
+      "workspaceStatus": "ok",
+      "resolutionMode": "qdrant",
+      "pointsCount": 578
+    },
+    "codeSearch": {
+      "hitCount": 3,
+      "rawHitCount": 3,
+      "topFiles": [
+        "0.dev-matrix/standards/RESUME-LED-DELIVERY-STANDARD.md",
+        "0.dev-matrix/CLOSING-DAY-HOOK.md",
+        "0.dev-matrix/graphify-out/cache/6c14301a2687d1b3abf7bda87410699cf14a046400fbde442a1a69842f2a6c93.json"
+      ]
+    },
+    "docsSearch": {
+      "hitCount": 0,
+      "topFiles": []
+    },
+    "health": {
+      "config_path": "C:\\Users\\Prakash\\AppData\\Roaming\\Code\\User\\mcp-tools\\roo_code_index_bridge_config.json",
+      "qdrant_url": "http://localhost:6335",
+      "embedder_provider": "ollama",
+      "embedder_model": "nomic-embed-text-v2-moe:latest",
+      "embedder_base_url": "http://localhost:11434",
+      "default_limit": 12,
+      "default_min_score": 0.4,
+      "local_cache_dir": "C:\\Users\\Prakash\\AppData\\Roaming\\Code\\User\\globalStorage\\rooveterinaryinc.roo-cline",
+      "qdrant": {
+        "status": "ok",
+        "collection_count": 27,
+        "collections_preview": [
+          "ws-252671d14873180d",
+          "ws-5a01e68bbe1f745a",
+          "ws-c133cb7abb5fd663",
+          "ws-c04af1019093d877",
+          "ws-f9d68308dc57fcf6",
+          "ws-292ec93a1e973671",
+          "ws-31c715bb3af2114a",
+          "ws-85da07dc14bc37cd",
+          "ws-7c6ac8b6ebe61e41",
+          "ws-4c888fcb4ce99bd8"
+        ]
+      },
+      "embedder": {
+        "status": "ok",
+        "model_count": 4
+      },
+      "workspace": {
+        "status": "ok",
+        "workspace_path": "D:\\Github\\Office_Scripts",
+        "collection_name": "ws-c133cb7abb5fd663",
+        "matched_workspace_string": "d:\\Github\\Office_Scripts",
+        "points_count": 578,
+        "resolution_mode": "qdrant"
+      }
+    }
+  }
+}
+--- graphify status ---
+=== Graphify Status ===
+Repo: Office_Scripts
+Python: D:\Github\Office_Scripts\.venv\Scripts\python.exe
+- Report: graphify-out/GRAPH_REPORT.md
+- Graph: graphify-out/graph.json
+- HTML: graphify-out/graph.html
+- Wiki: graphify-out/wiki/index.md
+- 7 files · ~17,771 words
+- Verdict: corpus is large enough that graph structure adds value.
+- 23 nodes · 23 edges · 7 communities detected
+- Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
+
+Common commands
+- Refresh: powershell -ExecutionPolicy Bypass -File .\0.dev-matrix\graphify.ps1 -Refresh
+- Wiki:    powershell -ExecutionPolicy Bypass -File .\0.dev-matrix\graphify.ps1 -Wiki
+- Query:   powershell -ExecutionPolicy Bypass -File .\0.dev-matrix\graphify.ps1 -Query "your query"
+- Explain: powershell -ExecutionPolicy Bypass -File .\0.dev-matrix\graphify.ps1 -Explain "NodeName"
+- Path:    powershell -ExecutionPolicy Bypass -File .\0.dev-matrix\graphify.ps1 -PathFrom "A" -PathTo "B"
+- Serve:   powershell -ExecutionPolicy Bypass -File .\0.dev-matrix\graphify.ps1 -Serve
+- Refresh + wiki: powershell -ExecutionPolicy Bypass -File .\0.dev-matrix\graphify.ps1 -Refresh -Wiki
+- Full multimodal refresh: /graphify .
+--- graphify.ps1 -Refresh ---
+Re-extracting code files in . (no LLM needed)...
+[graphify watch] Rebuilt: 46 nodes, 52 edges, 13 communities
+[graphify watch] graph.json and GRAPH_REPORT.md updated in graphify-out
+Code graph updated. For doc/paper/image changes run /graphify --update in your AI assistant.
+HTML written: D:\Github\Office_Scripts\graphify-out\graph.html
+--- graphify hooks status ---
+post-commit: not installed
+post-checkout: not installed
+Finished: 2026-05-31T15:38:55
+Summary: session-start maintenance completed successfully

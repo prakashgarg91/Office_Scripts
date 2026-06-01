@@ -1,12 +1,12 @@
 {
-    "State":  "failed",
-    "StartedAt":  "2026-05-11T21:25:28",
-    "FinishedAt":  "2026-05-11T21:25:41",
-    "DurationMinutes":  0.21,
-    "ExitCode":  1,
-    "Pid":  42300,
-    "Log":  "0.dev-matrix/test-reports/session-start-maintenance-20260511_212528.log",
-    "Summary":  "session-start maintenance completed with failures",
+    "State":  "passed",
+    "StartedAt":  "2026-05-31T15:38:38",
+    "FinishedAt":  "2026-05-31T15:38:55",
+    "DurationMinutes":  0.28,
+    "ExitCode":  0,
+    "Pid":  38488,
+    "Log":  "0.dev-matrix/test-reports/session-start-maintenance-20260531_153838.log",
+    "Summary":  "session-start maintenance completed successfully",
     "Steps":  [
                   {
                       "Label":  "code-review-graph update",
@@ -15,18 +15,18 @@
                   },
                   {
                       "Label":  "roo-index smoke",
-                      "State":  "failed",
-                      "Detail":  "roo bridge smoke failed"
+                      "State":  "checked",
+                      "Detail":  "collection ws-c133cb7abb5fd663; code hits 3; docs hits 0"
                   },
                   {
                       "Label":  "graphify status",
                       "State":  "checked",
-                      "Detail":  "graphify status checked; root graph report is 27 hour(s) old; local summary 23 nodes / 23 edges / 7 communities"
+                      "Detail":  "graphify status checked; root graph report is 38.5 hour(s) old; local summary 23 nodes / 23 edges / 7 communities"
                   },
                   {
                       "Label":  "graphify refresh",
                       "State":  "refreshed",
-                      "Detail":  "graphify report was stale at 27 hour(s) and was refreshed via graphify.ps1 -Refresh; local summary 23 nodes / 23 edges / 7 communities"
+                      "Detail":  "graphify report was stale at 38.5 hour(s) and was refreshed via graphify.ps1 -Refresh; local summary 46 nodes / 52 edges / 13 communities"
                   },
                   {
                       "Label":  "graphify hooks status",

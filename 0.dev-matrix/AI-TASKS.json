@@ -1,127 +1,132 @@
 ﻿{
-    "$schema": "AI Task Queue v2.0",
-    "meta": {
-        "purpose": "Canonical machine-owned queue for Office_Scripts launch normalization.",
-        "generatedOutputs": [
-            "0.dev-matrix/NEXT-2-TASKS.md",
-            "2-task.md"
-        ],
-        "notes": [
-            "Keep at most two active tasks.",
-            "Use proof-driven validation on every task.",
-            "Anchor work on one reusable automation bundle instead of leaving the repo as a loose script bucket."
-        ]
-    },
-    "policy": {
-        "maxActiveTasks": 2,
-        "promotableStatuses": [
-            "planned",
-            "queued",
-            "ready"
-        ],
-        "blockedStatuses": [
-            "blocked",
-            "parked",
-            "human-blocked"
-        ],
-        "terminalStatuses": [
-            "done",
-            "completed",
-            "cancelled"
-        ]
-    },
-    "tasks": [
-        {
-            "id": "OFF-101",
-            "title": "Define the first shippable automation bundle",
-            "status": "active",
-            "priority": "P1",
-            "phase": "analyze",
-            "order": 1,
-            "ownerFiles": [
-                "README.md",
-                "0.dev-matrix/LAUNCH_CHECKLIST.md",
-                "0.dev-matrix/TASK.md",
-                "0.dev-matrix/AI-HANDOFF.md"
-            ],
-            "dependsOn": [],
-            "why": "The repo has a broad Office automation description, but it still lacks one explicit reusable bundle as the current delivery slice.",
-            "definitionOfDone": "The repo names one explicit VBA, Power Query, or Office Script bundle as the current validated delivery target.",
-            "validation": [
-                "powershell -ExecutionPolicy Bypass -File ./0.dev-matrix/launch-check.ps1",
-                "powershell -ExecutionPolicy Bypass -File ./0.dev-matrix/repo-layout-index.ps1"
-            ],
-            "businessValue": "Turns Office_Scripts into a reusable automation asset instead of a generic script bucket."
-        },
-        {
-            "id": "OFF-102",
-            "title": "Add the automation contract artifact",
-            "status": "active",
-            "priority": "P1",
-            "phase": "contract",
-            "order": 2,
-            "ownerFiles": [
-                "0.dev-matrix/SPEC.json",
-                "0.dev-matrix/LAUNCH_CHECKLIST.md",
-                "README.md",
-                "Shared-scripts"
-            ],
-            "dependsOn": [],
-            "why": "The repo-local launch focus was still TBD and there is no accepted contract artifact for the first reusable automation bundle.",
-            "definitionOfDone": "The repo has an accepted contract artifact and the launch surfaces all point at the same first automation bundle.",
-            "validation": [
-                "powershell -ExecutionPolicy Bypass -File ./0.dev-matrix/launch-check.ps1",
-                "powershell -ExecutionPolicy Bypass -File ./0.dev-matrix/sync-two-task-loop.ps1 -Mode manual"
-            ],
-            "businessValue": "Makes the automation repo easier to sell, reuse, and validate."
-        },
-        {
-            "id": "OFF-103",
-            "title": "Validate the first reusable automation slice",
-            "status": "ready",
-            "priority": "P1",
-            "phase": "realize",
-            "order": 3,
-            "ownerFiles": [
-                "0.dev-matrix/TASK.md",
-                "0.dev-matrix/STATE.md",
-                "0.dev-matrix/AI-HANDOFF.md"
-            ],
-            "dependsOn": [
-                "OFF-101",
-                "OFF-102"
-            ],
-            "why": "The next meaningful move is one explicit automation proof slice, not more generic repo setup.",
-            "definitionOfDone": "One automation bundle lands with truthful validation and updated repo evidence.",
-            "validation": [
-                "powershell -ExecutionPolicy Bypass -File ./0.dev-matrix/launch-check.ps1",
-                "powershell -ExecutionPolicy Bypass -File ./0.dev-matrix/repo-layout-index.ps1"
-            ],
-            "businessValue": "Moves the repo toward a reusable business automation asset."
-        },
-        {
-            "id": "OFF-104",
-            "title": "Capture normalized Office automation evidence",
-            "status": "planned",
-            "priority": "P1",
-            "phase": "prove",
-            "order": 4,
-            "ownerFiles": [
-                "0.dev-matrix/AI-HANDOFF.md",
-                "0.dev-matrix/STATE.md",
-                "0.dev-matrix/TASK.md",
-                "0.dev-matrix/LAST-CLOSEOUT.md"
-            ],
-            "dependsOn": [
-                "OFF-103"
-            ],
-            "why": "The repo should finish the first automation slice with aligned proof and handoff continuity.",
-            "definitionOfDone": "Handoff, state, task board, and closeout all reflect the same validated automation evidence.",
-            "validation": [
-                "powershell -ExecutionPolicy Bypass -File ./0.dev-matrix/launch-check.ps1",
-                "powershell -ExecutionPolicy Bypass -File ./0.dev-matrix/sync-two-task-loop.ps1 -Mode manual"
-            ],
-            "businessValue": "Locks the repo\u0027s first reusable automation bundle into durable evidence future sessions can resume from."
-        }
-    ]
+    "$schema":  "AI Task Queue v2.0",
+    "meta":  {
+                 "purpose":  "Canonical machine-owned queue for Office_Scripts launch normalization.",
+                 "generatedOutputs":  [
+                                          "0.dev-matrix/NEXT-2-TASKS.md",
+                                          "2-task.md"
+                                      ],
+                 "notes":  [
+                               "Keep at most two active tasks.",
+                               "Use proof-driven validation on every task.",
+                               "Anchor work on one reusable automation bundle instead of leaving the repo as a loose script bucket."
+                           ]
+             },
+    "policy":  {
+                   "maxActiveTasks":  2,
+                   "promotableStatuses":  [
+                                              "planned",
+                                              "queued",
+                                              "ready"
+                                          ],
+                   "blockedStatuses":  [
+                                           "blocked",
+                                           "parked",
+                                           "human-blocked"
+                                       ],
+                   "terminalStatuses":  [
+                                            "done",
+                                            "completed",
+                                            "cancelled"
+                                        ]
+               },
+    "tasks":  [
+                  {
+                      "id":  "OFF-101",
+                      "title":  "Define the first shippable automation bundle",
+                      "status":  "done",
+                      "priority":  "P1",
+                      "phase":  "analyze",
+                      "order":  1,
+                      "ownerFiles":  [
+                                         "README.md",
+                                         "0.dev-matrix/LAUNCH_CHECKLIST.md",
+                                         "0.dev-matrix/TASK.md",
+                                         "0.dev-matrix/AI-HANDOFF.md"
+                                     ],
+                      "dependsOn":  [
+
+                                    ],
+                      "why":  "The repo has a broad Office automation description, but it still lacks one explicit reusable bundle as the current delivery slice.",
+                      "definitionOfDone":  "The repo names one explicit VBA, Power Query, or Office Script bundle as the current validated delivery target.",
+                      "validation":  [
+                                         "powershell -ExecutionPolicy Bypass -File ./0.dev-matrix/launch-check.ps1",
+                                         "powershell -ExecutionPolicy Bypass -File ./0.dev-matrix/repo-layout-index.ps1"
+                                     ],
+                      "businessValue":  "Turns Office_Scripts into a reusable automation asset instead of a generic script bucket."
+                  },
+                  {
+                      "id":  "OFF-102",
+                      "title":  "Add the automation contract artifact",
+                      "status":  "done",
+                      "priority":  "P1",
+                      "phase":  "contract",
+                      "order":  2,
+                      "ownerFiles":  [
+                                         "0.dev-matrix/SPEC.json",
+                                         "0.dev-matrix/LAUNCH_CHECKLIST.md",
+                                         "README.md",
+                                         "Shared-scripts"
+                                     ],
+                      "dependsOn":  [
+
+                                    ],
+                      "why":  "The repo-local launch focus was still TBD and there is no accepted contract artifact for the first reusable automation bundle.",
+                      "definitionOfDone":  "The repo has an accepted contract artifact and the launch surfaces all point at the same first automation bundle.",
+                      "validation":  [
+                                         "powershell -ExecutionPolicy Bypass -File ./0.dev-matrix/launch-check.ps1",
+                                         "powershell -ExecutionPolicy Bypass -File ./0.dev-matrix/sync-two-task-loop.ps1 -Mode manual"
+                                     ],
+                      "businessValue":  "Makes the automation repo easier to sell, reuse, and validate."
+                  },
+                  {
+                      "id":  "OFF-103",
+                      "title":  "Validate the first reusable automation slice",
+                      "status":  "done",
+                      "priority":  "P1",
+                      "phase":  "realize",
+                      "order":  3,
+                      "ownerFiles":  [
+                                         "0.dev-matrix/TASK.md",
+                                         "0.dev-matrix/STATE.md",
+                                         "0.dev-matrix/AI-HANDOFF.md"
+                                     ],
+                      "dependsOn":  [
+                                        "OFF-101",
+                                        "OFF-102"
+                                    ],
+                      "why":  "The next meaningful move is one explicit automation proof slice, not more generic repo setup.",
+                      "definitionOfDone":  "One automation bundle lands with truthful validation and updated repo evidence.",
+                      "validation":  [
+                                         "powershell -ExecutionPolicy Bypass -File ./0.dev-matrix/launch-check.ps1",
+                                         "powershell -ExecutionPolicy Bypass -File ./0.dev-matrix/repo-layout-index.ps1"
+                                     ],
+                      "businessValue":  "Moves the repo toward a reusable business automation asset."
+                  },
+                  {
+                      "id":  "OFF-104",
+                      "title":  "Capture normalized Office automation evidence",
+                      "status":  "active",
+                      "priority":  "P1",
+                      "phase":  "prove",
+                      "order":  4,
+                      "ownerFiles":  [
+                                         "0.dev-matrix/AI-HANDOFF.md",
+                                         "0.dev-matrix/STATE.md",
+                                         "0.dev-matrix/TASK.md",
+                                         "0.dev-matrix/LAST-CLOSEOUT.md"
+                                     ],
+                      "dependsOn":  [
+                                        "OFF-103"
+                                    ],
+                      "why":  "The repo should finish the first automation slice with aligned proof and handoff continuity.",
+                      "definitionOfDone":  "Handoff, state, task board, and closeout all reflect the same validated automation evidence.",
+                      "validation":  [
+                                         "powershell -ExecutionPolicy Bypass -File ./0.dev-matrix/launch-check.ps1",
+                                         "powershell -ExecutionPolicy Bypass -File ./0.dev-matrix/sync-two-task-loop.ps1 -Mode manual"
+                                     ],
+                      "businessValue":  "Locks the repo\u0027s first reusable automation bundle into durable evidence future sessions can resume from."
+                  }
+              ]
 }
+
