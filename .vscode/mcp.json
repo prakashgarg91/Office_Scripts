@@ -1,4 +1,4 @@
-﻿{
+{
     "inputs":  [
 
                ],
@@ -41,7 +41,7 @@
                                                   "-ExecutionPolicy",
                                                   "Bypass",
                                                   "-File",
-                                                  "D:/Github/tools/graphify-opencode-mcp.ps1"
+                                                  "D:/Github/0.dev-matrix/scripts/graphify-opencode-mcp.ps1"
                                               ]
                                  },
                     "roo-code-index-bridge":  {
